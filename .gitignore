@@ -1,0 +1,15 @@
+build
+wp-admin
+wp-includes
+wp-content/themes/index.php
+wp-content/themes/twentysixteen
+wp-content/themes/twentyseventeen
+wp-content/themes/twentynineteen
+wp-content/themes/twentytwenty
+wp-content/plugins
+wp-content/languages
+wp-content/upgrade
+*.php
+*.html
+node_modules
+*.txt
