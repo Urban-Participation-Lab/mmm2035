@@ -4,10 +4,10 @@ const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 module.exports = {
   ...defaultConfig,
   entry: {
-    viewer: './blocks/viewer/index',
+    'split-section': './blocks/split-section/index',
   },
   output: {
     path: path.resolve('./blocks'),
-    filename: '[name]/[name].js',
+    filename: '[name]/dist.js',
   },
 };

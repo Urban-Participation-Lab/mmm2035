@@ -14,7 +14,7 @@ services:
       WORDPRESS_DB_NAME: $DB_DATABASE
     volumes:
       - wordpress:/var/www/html
-      - ./wp-content/themes/JBNG:/var/www/html/wp-content/themes/JBNG
+      - ./wp-content/themes/MMM35:/var/www/html/wp-content/themes/MMM35
       - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins
 
   theme-builder:
@@ -23,7 +23,7 @@ services:
     command: npm start
     working_dir: /app
     volumes:
-      - ./wp-content/themes/JBNG:/app
+      - ./wp-content/themes/MMM35:/app
 
   plugin-builder:
     image: node:12
@@ -31,7 +31,7 @@ services:
     command: npm start
     working_dir: /app
     volumes:
-      - ./wp-content/mu-plugins/JBNG:/app
+      - ./wp-content/mu-plugins/MMM35:/app
 
   database:
     image: mysql:5.7

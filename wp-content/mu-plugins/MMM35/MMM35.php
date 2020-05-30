@@ -32,4 +32,4 @@ function mmm35_file_mimes( $mimes ) {
 }
 add_filter( 'upload_mimes', 'mmm35_file_mimes' );
 
-require_once( MMM35_PLUGIN_DIR . './blocks/viewer.php' );
+require_once( MMM35_PLUGIN_DIR . '/blocks/split-section.php' );

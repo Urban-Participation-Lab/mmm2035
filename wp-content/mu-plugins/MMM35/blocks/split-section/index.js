@@ -23,7 +23,7 @@ import { getBlobByURL, isBlobURL, revokeBlobURL } from '@wordpress/blob';
 import { withSelect } from '@wordpress/data';
 import { Component } from '@wordpress/element';
 
-class ThreeDViewer extends Component {
+class SplitSection extends Component {
   constructor() {
     super(...arguments);
 
@@ -111,12 +111,6 @@ class ThreeDViewer extends Component {
     return (
       <>
         <BlockControls key="controls">
-          <Toolbar controls={images.map((image, index) => ({
-            icon: 'marker',
-            title: `Select image number ${index + 1}`,
-            isActive: index === shownIndex,
-            onClick: () => this.setState({ shownIndex: index }),
-          }))} />
           <Toolbar>
             <IconButton
               icon="arrow-left-alt"
@@ -158,7 +152,6 @@ class ThreeDViewer extends Component {
             onSelect={ this.onSelectImages }
             value={ hasImagesWithId ? images : undefined }
             accept="image/*"
-            multiple
           />
         </div>
       </>
@@ -166,15 +159,11 @@ class ThreeDViewer extends Component {
   }
 };
 
-registerBlockType( 'jbng/viewer', {
-  title: __( 'MMM35', '3D Viewer' ),
-  category: 'jbng-blocks',
+registerBlockType( 'mmm35/split-section', {
+  title: __( 'MMM35', 'Split Section' ),
+  category: 'mmm35-blocks',
   supports: {
     html: false,
-  },
-
-  getEditWrapperProps(attributes) {
-    return { 'data-align': 'full' };
   },
 
   edit: compose([
@@ -183,7 +172,7 @@ registerBlockType( 'jbng/viewer', {
       const { mediaUpload } = getSettings();
       return { mediaUpload };
     }),
-  ])(ThreeDViewer),
+  ])(SplitSection),
 
   save: () => null,
 } );

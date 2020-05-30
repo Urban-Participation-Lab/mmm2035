@@ -6,20 +6,20 @@
  * @package MMM35
  */
 
-function jbng_render($attributes, $content) {
-  return '<flp-jbng class="alignfull" v-bind="'.htmlspecialchars(json_encode($attributes)).'" />';
+function mmm35_render($attributes, $content) {
+  return '<flp-mmm35 class="alignfull" v-bind="'.htmlspecialchars(json_encode($attributes)).'" />';
 }
 
-function jbng_block_init() {
+function mmm35_block_init() {
   // Skip block registration if Gutenberg is not enabled/merged.
   if ( ! function_exists( 'register_block_type' ) ) {
     return;
   }
   $dir = dirname( __FILE__ );
 
-  $index_js = 'viewer/viewer.js';
+  $index_js = 'split-section/dist.js';
   wp_register_script(
-    'jbng-block-editor',
+    'mmm35-block-editor',
     plugins_url( $index_js, __FILE__ ),
     array(
       'wp-block-editor',
@@ -30,36 +30,32 @@ function jbng_block_init() {
     filemtime( "$dir/$index_js" )
   );
 
-  $editor_css = 'viewer/editor.css';
+  $editor_css = 'split-section/editor.css';
   wp_register_style(
-    'jbng-block-editor',
+    'mmm35-block-editor',
     plugins_url( $editor_css, __FILE__ ),
     array(),
     filemtime( "$dir/$editor_css" )
   );
 
-  $style_css = 'viewer/style.css';
+  $style_css = 'split-section/style.css';
   wp_register_style(
-    'jbng-block',
+    'mmm35-block',
     plugins_url( $style_css, __FILE__ ),
     array(),
     filemtime( "$dir/$style_css" )
   );
 
-  register_block_type( 'jbng/viewer', array(
-    'editor_script' => 'jbng-block-editor',
-    'editor_style'  => 'jbng-block-editor',
-    'style'   => 'jbng-block',
+  register_block_type( 'mmm35/split-section', array(
+    'editor_script' => 'mmm35-block-editor',
+    'editor_style'  => 'mmm35-block-editor',
+    'style'   => 'mmm35-block',
     'attributes'  => array(
-      'images' => array(
-        'default' => array(),
-        'type' => 'array',
-        'items' => array(
-          'type' => 'object'
-        )
+      'image' => array(
+        'type' => 'object'
       ),
     ),
-    'render_callback' => 'jbng_render',
+    'render_callback' => 'mmm35_render',
   ) );
 }
-add_action( 'init', 'jbng_block_init' );
+add_action( 'init', 'mmm35_block_init' );
