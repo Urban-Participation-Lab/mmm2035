@@ -1,0 +1,27 @@
+.mmm35-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem;
+  margin-top: 3rem;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: var(--foreground);
+      text-decoration: none;
+      background: transparent;
+      border: 0;
+      outline: 0;
+      font: inherit;
+      text-transform: inherit;
+      letter-spacing: inherit;
+      cursor: pointer;
+    }
+  }
+}

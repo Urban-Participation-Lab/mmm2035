@@ -1,0 +1,28 @@
+{
+  "name": "MMM35-plugin",
+  "version": "0.1.0",
+  "author": "Benjamin Bädorf",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^6.0.0"
+  },
+  "dependencies": {
+    "@wordpress/blob": "^2.5.1",
+    "@wordpress/block-editor": "^3.3.0",
+    "@wordpress/components": "^8.4.0",
+    "@wordpress/compose": "^3.8.0",
+    "@wordpress/data": "^4.10.0",
+    "@wordpress/i18n": "^3.7.0",
+    "lodash": "^4.17.15"
+  }
+}

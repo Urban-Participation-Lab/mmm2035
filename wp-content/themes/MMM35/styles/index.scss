@@ -1,0 +1,56 @@
+/*
+Theme Name: MMM35
+Description: MMM35
+Author: Benjamin Bädorf
+Author URI: http://benjaminbaedorf.eu
+Version: 1.0.0
+*/
+
+$wp-admin-bar-breakpoint: 782px;
+
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1349px;
+$desktop-min: 1350px;
+
+$background: white;
+$foreground: black;
+$accent: #3497D4;
+
+$grey-1: #FAFAFA;
+$grey-2: rgba(0, 0, 0, 0.29);
+
+$head-height: 3.8rem;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  background: $background;
+  color: $foreground;
+
+  font-size: 16px;
+  @media screen and (min-width: $wp-admin-bar-breakpoint) { 
+    font-size: 22px;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@import 'reset.css';
+
+@import './head.scss';
+@import './navigation.scss';
+@import './main.scss';
+@import './post.scss';
+@import './project-list.scss';
+@import './footer.scss';
+
+@import './alignment.scss';

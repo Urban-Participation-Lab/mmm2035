@@ -1,0 +1,35 @@
+workspace:
+  path: /jbng
+
+kind: pipeline
+type: docker
+name: default
+steps:
+  - name: build
+    image: node:12
+    commands:
+      - cd ./wp-content/themes/JBNG
+      - npm ci
+      - npm run build
+
+  - name: publish
+    when: 
+      branch:
+        - master
+    image: appleboy/drone-scp
+    settings:
+      host: webyfssbz.wh.hosting.zone
+      port: 2244
+      username:
+        from_secret: dev_ssh_user
+      key:
+        from_secret: dev_ssh_key
+      source:
+        - ./wp-content/themes/JBNG/*.php
+        - ./wp-content/themes/JBNG/*.css
+        - ./wp-content/themes/JBNG/*.png
+        - ./wp-content/themes/JBNG/template-parts/*
+        - ./wp-content/themes/JBNG/classes/*
+      target: /home/webyfssbz/html/jbng.b12f.io/wp-content/themes/JBNG/
+      strip_components: 3
+      rm: true

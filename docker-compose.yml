@@ -6,22 +6,32 @@ services:
     build: ./.docker/wordpress/Dockerfile
     restart: always
     ports:
-      - 8080:80
+      - 80:80
     environment:
       WORDPRESS_DB_HOST: $DB_HOST
       WORDPRESS_DB_USER: $DB_USER
       WORDPRESS_DB_PASSWORD: $DB_PASSWORD
       WORDPRESS_DB_NAME: $DB_DATABASE
     volumes:
-      - ./:/var/www/html
+      - wordpress:/var/www/html
+      - ./wp-content/themes/JBNG:/var/www/html/wp-content/themes/JBNG
+      - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins
 
-  client:
+  theme-builder:
     image: node:12
     restart: always
     command: npm start
     working_dir: /app
     volumes:
-      - ./:/app
+      - ./wp-content/themes/JBNG:/app
+
+  plugin-builder:
+    image: node:12
+    restart: always
+    command: npm start
+    working_dir: /app
+    volumes:
+      - ./wp-content/mu-plugins/JBNG:/app
 
   database:
     image: mysql:5.7
@@ -36,3 +46,4 @@ services:
 
 volumes:
   database:
+  wordpress:

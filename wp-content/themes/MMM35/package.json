@@ -1,0 +1,32 @@
+{
+  "name": "mmm35",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --raw --kill-others 'npm run watch:css' 'npm run watch:js'",
+    "build": "concurrently --raw 'npm run build:css' 'npm run build:js'",
+    "build:css": "sass ./styles/index.scss style.css",
+    "watch:css": "sass --watch ./styles/index.scss style.css",
+    "build:js": "webpack --config ./webpack.config.js",
+    "watch:js": "webpack --config ./webpack.config.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "concurrently": "^5.2.0",
+    "sass": "^1.26.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "reset.css": "^2.0.2",
+    "three": "^0.116.1"
+  }
+}
