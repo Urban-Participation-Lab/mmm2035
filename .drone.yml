@@ -18,7 +18,7 @@ steps:
         - master
     image: appleboy/drone-scp
     settings:
-      host: webyfssbz.wh.hosting.zone
+      host: webpxck7g.wh.hosting.zone
       port: 2244
       username:
         from_secret: dev_ssh_user
@@ -30,6 +30,6 @@ steps:
         - ./wp-content/themes/MMM35/*.png
         - ./wp-content/themes/MMM35/template-parts/*
         - ./wp-content/themes/MMM35/classes/*
-      target: /home/webyfssbz/html/mmm35.b12f.io/wp-content/themes/MMM35/
+      target: /home/webpxck7g/html/mmm35.b12f.io/wp-content/themes/MMM35/
       strip_components: 3
       rm: true
