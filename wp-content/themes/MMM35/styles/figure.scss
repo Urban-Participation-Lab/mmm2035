@@ -1,0 +1,19 @@
+.wp-block-image,
+.mmm35-figure {
+  position: relative;
+}
+
+.wp-block-image > figcaption,
+.mmm35-figure__caption {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  background: linear-gradient(to right, transparent 0%, white 30%);
+  font-size: 0.5rem;
+  margin: 0;
+}
