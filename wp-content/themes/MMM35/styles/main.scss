@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  background: $background;
 
   > * {
     margin-left: 1rem;
@@ -14,4 +15,8 @@
   figure {
     text-align: center;
   }
+}
+
+.mmm35-hero + .mmm35-main {
+  margin-top: $hero-height;
 }

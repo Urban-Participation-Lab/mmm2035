@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
     <footer class="mmm35-footer">
+      <p>Created by Urban Participation Lab</p>
+
       <?php if ( has_nav_menu( 'primary' ) ) { ?>
         <?php wp_nav_menu(
           array(

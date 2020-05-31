@@ -1,0 +1,14 @@
+.mmm35-hero {
+  position: fixed;
+  top: $head-height;
+  left: 0;
+  right: 0;
+  height: $hero-height;
+  z-index: -1;
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

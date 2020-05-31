@@ -1,11 +1,11 @@
 .mmm35-nav {
-  background: var(--background-t);
+  background: $background;
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
   position: fixed;
-  top: var(--head-height);
+  top: $head-height;
   bottom: 0;
   left: 0;
   right: 0;
@@ -13,7 +13,6 @@
   align-items: center;
 
   &_footer #{&}__item-link {
-    color: var(--foreground);
     text-decoration: none;
     background: transparent;
     border: 0;
@@ -28,9 +27,15 @@
     text-transform: none;
     font-size: 1.8rem;
     display: flex;
+    color: $foreground;
+
+    &_current {
+      color: $accent;
+    }
   }
 
   &__item-link {
+    color: inherit;
   }
 
   @media screen and (min-width: $tablet-min) {

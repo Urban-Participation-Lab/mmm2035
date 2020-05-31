@@ -1,5 +1,5 @@
 workspace:
-  path: /jbng
+  path: /mmm35
 
 kind: pipeline
 type: docker
@@ -8,7 +8,7 @@ steps:
   - name: build
     image: node:12
     commands:
-      - cd ./wp-content/themes/JBNG
+      - cd ./wp-content/themes/MMM35
       - npm ci
       - npm run build
 
@@ -25,11 +25,11 @@ steps:
       key:
         from_secret: dev_ssh_key
       source:
-        - ./wp-content/themes/JBNG/*.php
-        - ./wp-content/themes/JBNG/*.css
-        - ./wp-content/themes/JBNG/*.png
-        - ./wp-content/themes/JBNG/template-parts/*
-        - ./wp-content/themes/JBNG/classes/*
-      target: /home/webyfssbz/html/jbng.b12f.io/wp-content/themes/JBNG/
+        - ./wp-content/themes/MMM35/*.php
+        - ./wp-content/themes/MMM35/*.css
+        - ./wp-content/themes/MMM35/*.png
+        - ./wp-content/themes/MMM35/template-parts/*
+        - ./wp-content/themes/MMM35/classes/*
+      target: /home/webyfssbz/html/mmm35.b12f.io/wp-content/themes/MMM35/
       strip_components: 3
       rm: true

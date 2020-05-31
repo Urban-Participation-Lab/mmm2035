@@ -23,7 +23,7 @@ class MMM35WalkerNavMenu extends Walker_Nav_Menu {
 
   public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     $output .= sprintf( "\n<li class=\"" . $this->baseClass . "__item%s\"><a href=\"%s\" class=\"" . $this->baseClass . "__item-link\">%s</a></li>\n",
-      ( $item->object_id === get_the_ID() ) ? ' ' . $this->baseClass . '__item_current' : '',
+      $item->current ? ' ' . $this->baseClass . '__item_current' : '',
       $item->url,
       $item->title
     );

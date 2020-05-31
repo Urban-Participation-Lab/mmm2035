@@ -21,6 +21,7 @@ $grey-1: #FAFAFA;
 $grey-2: rgba(0, 0, 0, 0.29);
 
 $head-height: 3.8rem;
+$hero-height: 80vh;
 
 * {
   box-sizing: border-box;
@@ -48,6 +49,7 @@ body {
 
 @import './head.scss';
 @import './navigation.scss';
+@import './hero.scss';
 @import './main.scss';
 @import './post.scss';
 @import './post-list.scss';
