@@ -36,4 +36,3 @@ steps:
         - ./wp-content/themes/MMM35/template-parts/*
         - ./wp-content/themes/MMM35/classes/*
       target: /home/webpxck7g/html/mmm35.b12f.io/
-      rm: true
