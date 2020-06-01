@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently --raw --kill-others 'npm run watch:css' 'npm run watch:js'",
-    "build": "concurrently --raw 'npm run build:css' 'npm run build:js'",
-    "build:css": "concurrently --raw --kill-others 'npm run build:css:theme' 'npm run build:css:editor'",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "npm run build:css:theme && npm run build:css:editor",
     "watch:css": "concurrently --raw --kill-others 'npm run watch:css:theme' 'npm run watch:css:editor'",
     "build:css:theme": "sass ./styles/index.scss style.css",
     "watch:css:theme": "sass --watch ./styles/index.scss style.css",
