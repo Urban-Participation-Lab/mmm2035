@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "author": "Benjamin Bädorf",
   "scripts": {
-    "start": "wp-scripts start",
-    "build": "wp-scripts build",
+    "start": "concurrently --raw --kill-others 'npm run watch:wp' 'npm run watch:css'",
+    "build": "concurrently --raw --kill-others 'npm run build:wp' 'npm run build:css'",
+    "watch:wp": "wp-scripts start",
+    "build:wp": "wp-scripts build",
+    "build:css": "sass ./blocks/:./blocks/",
+    "watch:css": "sass --watch ./blocks/:./blocks/",
     "check-engines": "wp-scripts check-engines",
     "check-licenses": "wp-scripts check-licenses",
     "lint:css": "wp-scripts lint-style",
@@ -14,7 +18,9 @@
     "test:unit": "wp-scripts test-unit-js"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^6.0.0"
+    "@wordpress/scripts": "^6.0.0",
+    "concurrently": "^5.2.0",
+    "sass": "^1.26.7"
   },
   "dependencies": {
     "@wordpress/blob": "^2.5.1",

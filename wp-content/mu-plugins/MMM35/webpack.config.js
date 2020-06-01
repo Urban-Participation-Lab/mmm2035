@@ -4,7 +4,7 @@ const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 module.exports = {
   ...defaultConfig,
   entry: {
-    'split-section': './blocks/split-section/index',
+    'media-text': './blocks/media-text/index',
   },
   output: {
     path: path.resolve('./blocks'),
