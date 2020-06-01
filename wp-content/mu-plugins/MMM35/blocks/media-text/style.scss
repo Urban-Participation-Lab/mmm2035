@@ -14,12 +14,9 @@
     }
   }
 
-  & > .block-editor-inner-blocks {
+  &__content {
     flex-basis: 50%;
-  }
-
-  .block-editor-inner-blocks,
-  .editor-media-container__resizer {
+    flex-grow: 1;
     align-self: center;
   }
 
@@ -27,7 +24,7 @@
     & > .wp-block-mmm35-media-text__media {
       order: 2;
     }
-    & > .block-editor-inner-blocks {
+    & .wp-block-mmm35-media-text__content {
       order: 1;
     }
   }

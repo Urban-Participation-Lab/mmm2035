@@ -12,7 +12,7 @@ steps:
       - npm ci
       - npm run build
 
-  - name: publish
+  - name: publish-theme
     when: 
       branch:
         - master
@@ -25,11 +25,15 @@ steps:
       key:
         from_secret: dev_ssh_key
       source:
+        - ./wp-content/mu-plugins/MMM35.php
+        - ./wp-content/mu-plugins/MMM35/*
+        - ./wp-content/mu-plugins/MMM35/blocks/*.php
+        - ./wp-content/mu-plugins/MMM35/blocks/media-text/dist.js
+        - ./wp-content/mu-plugins/MMM35/blocks/media-text/*.css
         - ./wp-content/themes/MMM35/*.php
         - ./wp-content/themes/MMM35/*.css
         - ./wp-content/themes/MMM35/*.png
         - ./wp-content/themes/MMM35/template-parts/*
         - ./wp-content/themes/MMM35/classes/*
-      target: /home/webpxck7g/html/mmm35.b12f.io/wp-content/themes/MMM35/
-      strip_components: 3
+      target: /home/webpxck7g/html/mmm35.b12f.io/
       rm: true

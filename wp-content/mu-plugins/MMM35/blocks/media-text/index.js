@@ -12,7 +12,7 @@ import edit from './edit';
 import save from './save';
 
 export const settings = {
-	title: __( 'Media & Text' ),
+  title: __( 'Media & Text' ),
 };
 
 registerBlockType( 'mmm35/media-text', {

@@ -4,6 +4,7 @@
 
   &__media {
     flex-basis: 40%;
+    flex-grow: 1;
     max-width: 50%;
     margin: 0;
 
@@ -16,11 +17,23 @@
 
   & > .block-editor-inner-blocks {
     flex-basis: 50%;
+    flex-grow: 1;
   }
 
   .block-editor-inner-blocks,
   .editor-media-container__resizer {
     align-self: center;
+  }
+
+  &.has-media-on-the-top {
+    flex-direction: column;
+    align-items: stretch;
+
+    & > .wp-block-mmm35-media-text__media,
+    & > .block-editor-inner-blocks {
+      width: 100%;
+      max-width: unset;
+    }
   }
 
   &.has-media-on-the-right {
@@ -43,8 +56,10 @@
   @media (max-width: 768px) {
     flex-direction: column;
 
+    & > .block-editor-inner-blocks,
     &__media {
       max-width: unset;
+      align-items: stretch;
     }
 
     &.has-media-on-the-right {

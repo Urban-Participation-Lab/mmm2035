@@ -9,8 +9,6 @@ import { noop, isEmpty } from 'lodash';
  */
 import { InnerBlocks } from '@wordpress/block-editor';
 
-const DEFAULT_MEDIA_WIDTH = 50;
-
 export default function save( { attributes } ) {
   const {
     mediaAlt,
@@ -62,11 +60,11 @@ export default function save( { attributes } ) {
 
   return (
     <div className={ className }>
-      <figure className="wp-block-media-text__media">
+      <figure className="wp-block-mmm35-media-text__media">
         { ( mediaTypeRenders[ mediaType ] || noop )() }
         <figcaption>{mediaCaption}</figcaption>
       </figure>
-      <div className="wp-block-media-text__content">
+      <div className="wp-block-mmm35-media-text__content">
         <InnerBlocks.Content />
       </div>
     </div>

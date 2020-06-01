@@ -709,7 +709,6 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var DEFAULT_MEDIA_WIDTH = 50;
 function save(_ref) {
   var attributes = _ref.attributes;
   var mediaAlt = attributes.mediaAlt,
@@ -757,9 +756,9 @@ function save(_ref) {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     className: className
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("figure", {
-    className: "wp-block-media-text__media"
+    className: "wp-block-mmm35-media-text__media"
   }, (mediaTypeRenders[mediaType] || lodash__WEBPACK_IMPORTED_MODULE_2__["noop"])(), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("figcaption", null, mediaCaption)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "wp-block-media-text__content"
+    className: "wp-block-mmm35-media-text__content"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["InnerBlocks"].Content, null)));
 }
 

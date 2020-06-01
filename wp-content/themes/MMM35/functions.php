@@ -27,6 +27,14 @@ function mmm35_theme_support() {
    */
   add_theme_support( 'title-tag' );
   add_theme_support( 'align-wide' );
+
+  add_editor_style( 'editor-styles.css' );
+  add_theme_support( 'editor-styles' );
+
+  // Disable breakage
+  add_theme_support( 'disable-custom-font-sizes' );
+  add_theme_support( 'disable-custom-colors' );
+  add_theme_support( 'disable-custom-gradients' );
 }
 add_action( 'after_setup_theme', 'mmm35_theme_support' );
 
