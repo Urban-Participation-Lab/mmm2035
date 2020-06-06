@@ -32,6 +32,9 @@ body {
 
 @import 'reset.css';
 
+@import './alignment.scss';
+@import './figure.scss';
+
 @import './head.scss';
 @import './navigation.scss';
 @import './hero.scss';
@@ -39,6 +42,3 @@ body {
 @import './post.scss';
 @import './post-list.scss';
 @import './footer.scss';
-
-@import './alignment.scss';
-@import './figure.scss';

@@ -19,6 +19,14 @@ function mmm35_theme_support() {
   // Add support for full and wide align images.
   add_theme_support( 'align-wide' );
 
+  add_theme_support( 'custom-logo', array(
+    'height'      => 200,
+    'width'       => 400,
+    'flex-height' => false,
+    'flex-width'  => true,
+    'header-text' => array( 'site-title', 'site-description' ),
+  ) );
+
   /*
    * Let WordPress manage the document title.
    * By adding theme support, we declare that this theme does not use a
