@@ -2,7 +2,7 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { mediaAndText as icon } from '@wordpress/icons';
+import { button as icon } from '@wordpress/icons';
 import { registerBlockType } from '@wordpress/blocks';
 
 /**
@@ -11,13 +11,9 @@ import { registerBlockType } from '@wordpress/blocks';
 import edit from './edit';
 import save from './save';
 
-export const settings = {
-  title: __( 'Media & Text' ),
-};
-
-registerBlockType( 'mmm35/media-text', {
-  title: __( 'MMM35 Media & Text', 'MMM35'),
-  description: __( 'Set media and words side-by-side for a richer layout.' ),
+registerBlockType( 'mmm35/button', {
+  title: __( 'MMM35 Button', 'MMM35'),
+  description: __( 'Link button' ),
   icon,
   category: 'mmm35-blocks',
   supports: {

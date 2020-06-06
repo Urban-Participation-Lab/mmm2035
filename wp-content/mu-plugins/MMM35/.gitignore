@@ -8,3 +8,6 @@ build/
 *.sql
 *.tar.gz
 *.zip
+*.css
+*.map
+dist.*

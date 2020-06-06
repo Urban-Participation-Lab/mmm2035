@@ -4,6 +4,8 @@ const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 module.exports = {
   ...defaultConfig,
   entry: {
+    'button': './blocks/button/index',
+    'introduction': './blocks/introduction/index',
     'media-text': './blocks/media-text/index',
   },
   output: {

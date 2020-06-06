@@ -4,7 +4,7 @@ services:
   wordpress:
     image: wordpress
     build: ./.docker/wordpress/Dockerfile
-    restart: always
+    restart: unless-stopped
     ports:
       - 80:80
     environment:
@@ -19,23 +19,25 @@ services:
 
   theme-builder:
     image: node:12
-    restart: always
+    restart: unless-stopped
     command: npm start
     working_dir: /app
     volumes:
       - ./wp-content/themes/MMM35:/app
+      - ./variables.scss:/app/variables.scss
 
   plugin-builder:
     image: node:12
-    restart: always
+    restart: unless-stopped
     command: npm start
     working_dir: /app
     volumes:
       - ./wp-content/mu-plugins/MMM35:/app
+      - ./variables.scss:/app/variables.scss
 
   database:
     image: mysql:5.7
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_DATABASE: $DB_DATABASE
       MYSQL_USER: $DB_USER

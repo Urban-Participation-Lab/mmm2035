@@ -1,5 +1,9 @@
+@import '../../variables.scss';
+
+// This component is not mobile-first!
+
 .wp-block-mmm35-media-text {
-  background-color: #fafafa;
+  background-color: $grey-1;
   display: flex;
 
   &__media {
@@ -15,6 +19,7 @@
   }
 
   &__content {
+    padding: 32px;
     flex-basis: 50%;
     flex-grow: 1;
     align-self: center;
@@ -37,8 +42,12 @@
     padding: 0 8% 0 8%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $tablet-min) {
     flex-direction: column;
+
+    &__content {
+      padding: 16px;
+    }
 
     &__media {
       max-width: unset;

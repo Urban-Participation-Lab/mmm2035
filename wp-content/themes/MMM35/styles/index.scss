@@ -6,22 +6,7 @@ Author URI: http://benjaminbaedorf.eu
 Version: 1.0.0
 */
 
-$wp-admin-bar-breakpoint: 782px;
-
-$mobile-max: 767px;
-$tablet-min: 768px;
-$tablet-max: 1349px;
-$desktop-min: 1350px;
-
-$background: white;
-$foreground: black;
-$accent: #3497D4;
-
-$grey-1: #FAFAFA;
-$grey-2: rgba(0, 0, 0, 0.29);
-
-$head-height: 3.8rem;
-$hero-height: 80vh;
+@import '../variables.scss';
 
 * {
   box-sizing: border-box;

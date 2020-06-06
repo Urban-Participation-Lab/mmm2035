@@ -1,5 +1,7 @@
+@import '../../variables.scss';
+
 .wp-block-mmm35-media-text {
-  background-color: #fafafa;
+  background-color: $grey-1;
   display: flex;
 
   &__media {
@@ -53,7 +55,7 @@
     padding: 0 8% 0 8%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $tablet-min) {
     flex-direction: column;
 
     & > .block-editor-inner-blocks,
