@@ -5,11 +5,17 @@
   align-items: center;
   width: 100vw;
   background: $background;
+  padding: 16px;
+
+  @media screen and (min-width: $tablet-min) {
+    padding: 64px;
+  }
 
   > * {
     margin-left: 1rem;
     margin-right: 1rem;
-    width: 60%;
+    width: 100%;
+    max-width: 1440px;
   }
 
   figure {
