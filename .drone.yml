@@ -28,9 +28,15 @@ steps:
         - ./wp-content/mu-plugins/MMM35.php
         - ./wp-content/mu-plugins/MMM35/MMM35.php
         - ./wp-content/mu-plugins/MMM35/blocks/*.php
-        - ./wp-content/mu-plugins/MMM35/blocks/*/dist.js
-        - ./wp-content/mu-plugins/MMM35/blocks/*/*.css
-        - ./wp-content/mu-plugins/MMM35/blocks/*/dist.asset.php
+        - ./wp-content/mu-plugins/MMM35/blocks/button/dist.js
+        - ./wp-content/mu-plugins/MMM35/blocks/button/*.css
+        - ./wp-content/mu-plugins/MMM35/blocks/button/dist.asset.php
+        - ./wp-content/mu-plugins/MMM35/blocks/media-text/dist.js
+        - ./wp-content/mu-plugins/MMM35/blocks/media-text/*.css
+        - ./wp-content/mu-plugins/MMM35/blocks/media-text/dist.asset.php
+        - ./wp-content/mu-plugins/MMM35/blocks/introduction/dist.js
+        - ./wp-content/mu-plugins/MMM35/blocks/introduction/*.css
+        - ./wp-content/mu-plugins/MMM35/blocks/introduction/dist.asset.php
         - ./wp-content/themes/MMM35/*.php
         - ./wp-content/themes/MMM35/*.css
         - ./wp-content/themes/MMM35/*.png
