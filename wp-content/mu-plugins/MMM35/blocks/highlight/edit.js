@@ -1,9 +1,4 @@
 /**
- * External dependencies
- */
-import classnames from 'classnames';
-
-/**
  * WordPress dependencies
  */
 import { __, _x } from '@wordpress/i18n';
@@ -13,7 +8,6 @@ import {
   BlockControls,
   InspectorControls,
   RichText,
-  __experimentalBlock as Block,
   getFontSize,
   __experimentalUseEditorFeature as useEditorFeature,
 } from '@wordpress/block-editor';
@@ -28,68 +22,6 @@ import { formatLtr } from '@wordpress/icons';
 const { getComputedStyle } = window;
 const querySelector = window.document.querySelector.bind( document );
 
-const name = 'core/paragraph';
-const PARAGRAPH_DROP_CAP_SELECTOR = 'p.has-drop-cap';
-
-function ParagraphRTLToolbar( { direction, setDirection } ) {
-  const isRTL = useSelect( ( select ) => {
-    return !! select( 'core/block-editor' ).getSettings().isRTL;
-  }, [] );
-
-  return (
-    isRTL && (
-      <ToolbarGroup
-        controls={ [
-          {
-            icon: formatLtr,
-            title: _x( 'Left to right', 'editor button' ),
-            isActive: direction === 'ltr',
-            onClick() {
-              setDirection(
-                direction === 'ltr' ? undefined : 'ltr'
-              );
-            },
-          },
-        ] }
-      />
-    )
-  );
-}
-
-function useDropCap( isDropCap, fontSize, styleFontSize ) {
-  const isDisabled = ! useEditorFeature( 'typography.dropCap' );
-
-  const [ minimumHeight, setMinimumHeight ] = useState();
-
-  const { fontSizes } = useSelect( ( select ) =>
-    select( 'core/block-editor' ).getSettings()
-  );
-
-  const fontSizeObject = getFontSize( fontSizes, fontSize, styleFontSize );
-  useEffect( () => {
-    if ( isDisabled ) {
-      return;
-    }
-
-    const element = querySelector( PARAGRAPH_DROP_CAP_SELECTOR );
-    if ( isDropCap && element ) {
-      setMinimumHeight(
-        getComputedStyle( element, 'first-letter' ).lineHeight
-      );
-    } else if ( minimumHeight ) {
-      setMinimumHeight( undefined );
-    }
-  }, [
-    isDisabled,
-    isDropCap,
-    minimumHeight,
-    setMinimumHeight,
-    fontSizeObject.size,
-  ] );
-
-  return [ ! isDisabled, minimumHeight ];
-}
-
 function ParagraphBlock( {
   attributes,
   mergeBlocks,
@@ -100,79 +32,29 @@ function ParagraphBlock( {
   const {
     align,
     content,
-    direction,
-    dropCap,
     placeholder,
-    fontSize,
-    style,
   } = attributes;
   const ref = useRef();
-  const [ isDropCapEnabled, dropCapMinimumHeight ] = useDropCap(
-    dropCap,
-    fontSize,
-    style?.fontSize
-  );
-
-  const styles = {
-    direction,
-    minHeight: dropCapMinimumHeight,
-  };
 
   return (
     <>
-      <BlockControls>
-        <AlignmentToolbar
-          value={ align }
-          onChange={ ( newAlign ) =>
-            setAttributes( { align: newAlign } )
-          }
-        />
-        <ParagraphRTLToolbar
-          direction={ direction }
-          setDirection={ ( newDirection ) =>
-            setAttributes( { direction: newDirection } )
-          }
-        />
-      </BlockControls>
-      <InspectorControls>
-        { isDropCapEnabled && (
-          <PanelBody title={ __( 'Text settings' ) }>
-            <ToggleControl
-              label={ __( 'Drop cap' ) }
-              checked={ !! dropCap }
-              onChange={ () =>
-                setAttributes( { dropCap: ! dropCap } )
-              }
-              help={
-                dropCap
-                  ? __( 'Showing large initial letter.' )
-                  : __(
-                      'Toggle to show a large initial letter.'
-                    )
-              }
-            />
-          </PanelBody>
-        ) }
-      </InspectorControls>
       <RichText
         ref={ ref }
         identifier="content"
-        tagName={ Block.p }
-        className={ classnames( {
-          'has-drop-cap': dropCap,
-          [ `has-text-align-${ align }` ]: align,
-        } ) }
-        style={ styles }
+        tagName="p"
+        className="mmm35-highlight"
+        allowedFormats={['core/bold', 'core/link', 'core/italic']}
         value={ content }
         onChange={ ( newContent ) =>
           setAttributes( { content: newContent } )
         }
         onSplit={ ( value ) => {
+          console.log('onsplit', value);
           if ( ! value ) {
-            return createBlock( name );
+            return createBlock( 'core/paragraph' );
           }
 
-          return createBlock( name, {
+          return createBlock( 'mmm35/highlight', {
             ...attributes,
             content: value,
           } );
@@ -182,7 +64,7 @@ function ParagraphBlock( {
         onRemove={ onRemove }
         aria-label={
           content
-            ? __( 'Paragraph block' )
+            ? __( 'Highlight block' )
             : __(
                 'Empty block; start writing or type forward slash to choose a block'
               )
