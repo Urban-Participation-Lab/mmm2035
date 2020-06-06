@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:     MMM35
- * Description:     View 3D models with three.js
+ * Description:     MMM35 Gutenberg Blocks
  * Author:          Benjamin Bädorf
  * Author URI:      https://benjaminbaedorf.eu
- * Text Domain:     3dviewer
+ * Text Domain:     MMM35
  * Version:         0.1.0
  *
  * @package         MMM35
@@ -24,13 +24,6 @@ function mmm35_block_category( $categories, $post ) {
   );
 }
 add_filter( 'block_categories', 'mmm35_block_category', 10, 2);
-
-function mmm35_file_mimes( $mimes ) {
-  $mimes['json'] = 'application/json'; 
-
-  return $mimes;
-}
-add_filter( 'upload_mimes', 'mmm35_file_mimes' );
 
 require_once( MMM35_PLUGIN_DIR . '/blocks/media-text.php' );
 // require_once( MMM35_PLUGIN_DIR . '/blocks/introduction.php' );

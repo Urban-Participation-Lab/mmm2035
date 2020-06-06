@@ -5,10 +5,17 @@ kind: pipeline
 type: docker
 name: default
 steps:
-  - name: build
+  - name: "Build theme"
     image: node:12
     commands:
       - cd ./wp-content/themes/MMM35
+      - npm ci
+      - npm run build
+
+  - name: "Build plugin"
+    image: node:12
+    commands:
+      - cd ./wp-content/mu-plugins/MMM35
       - npm ci
       - npm run build
 
