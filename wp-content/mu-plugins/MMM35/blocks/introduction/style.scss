@@ -1,3 +1,5 @@
+@import '../../../../../variables.scss';
+
 .is-small-text {
 	font-size: 14px;
 }
@@ -29,7 +31,7 @@
 }
 
 p.has-background {
-	padding: $block-bg-padding--v $block-bg-padding--h;
+//	padding: $block-bg-padding--v $block-bg-padding--h;
 }
 
 p.has-text-color a {
