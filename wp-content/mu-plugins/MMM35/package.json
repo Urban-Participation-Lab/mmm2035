@@ -4,7 +4,7 @@
   "author": "Benjamin Bädorf",
   "scripts": {
     "start": "concurrently --raw --kill-others 'npm run watch:wp' 'npm run watch:css'",
-    "build": "concurrently --raw --kill-others 'npm run build:wp' 'npm run build:css'",
+    "build": "npm run build:wp && npm run build:css",
     "watch:wp": "wp-scripts start",
     "build:wp": "wp-scripts build",
     "build:css": "sass ./blocks/:./blocks/",
