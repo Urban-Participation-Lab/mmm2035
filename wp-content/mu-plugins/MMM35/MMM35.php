@@ -26,5 +26,5 @@ function mmm35_block_category( $categories, $post ) {
 add_filter( 'block_categories', 'mmm35_block_category', 10, 2);
 
 require_once( MMM35_PLUGIN_DIR . '/blocks/media-text.php' );
-// require_once( MMM35_PLUGIN_DIR . '/blocks/introduction.php' );
+require_once( MMM35_PLUGIN_DIR . '/blocks/highlight.php' );
 require_once( MMM35_PLUGIN_DIR . '/blocks/button.php' );
