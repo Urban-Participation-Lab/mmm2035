@@ -60,9 +60,9 @@ export default function save( { attributes } ) {
 
   return (
     <div className={ className }>
-      <figure className="wp-block-mmm35-media-text__media">
+      <figure className="mmm35-figure wp-block-mmm35-media-text__media">
         { ( mediaTypeRenders[ mediaType ] || noop )() }
-        <figcaption>{mediaCaption}</figcaption>
+        <figcaption className="mmm35-figure__caption">{mediaCaption}</figcaption>
       </figure>
       <div className="wp-block-mmm35-media-text__content">
         <InnerBlocks.Content />

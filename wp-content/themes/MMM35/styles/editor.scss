@@ -1,3 +1,5 @@
+@import '../../../../variables.scss';
+
 /* Main column width */
 .wp-block {
     max-width: 1300px;
@@ -12,3 +14,5 @@
 .wp-block[data-align="full"] {
     max-width: none;
 }
+
+@import './figure.scss';

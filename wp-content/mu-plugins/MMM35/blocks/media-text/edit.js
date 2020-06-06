@@ -106,6 +106,7 @@ class MediaTextEdit extends Component {
       mediaAlt: media.alt,
       mediaId: media.id,
       mediaType,
+      mediaCaption: media.caption,
       mediaUrl: src || media.url,
       mediaLink: media.link || undefined,
       href: newHref,
@@ -123,6 +124,7 @@ class MediaTextEdit extends Component {
       mediaId,
       mediaPosition,
       mediaType,
+      mediaCaption,
       mediaUrl,
       imageFill,
     } = attributes;
@@ -134,6 +136,7 @@ class MediaTextEdit extends Component {
           mediaAlt,
           mediaId,
           mediaType,
+          mediaCaption,
           mediaUrl,
           mediaPosition,
           imageFill,
@@ -155,6 +158,7 @@ class MediaTextEdit extends Component {
       mediaAlt,
       mediaPosition,
       mediaType,
+      mediaCaption,
       mediaUrl,
       rel,
       href,
@@ -192,6 +196,9 @@ class MediaTextEdit extends Component {
     const onMediaAltChange = ( newMediaAlt ) => {
       setAttributes( { mediaAlt: newMediaAlt } );
     };
+    const onMediaCaptionChange = ( newMediaCaption ) => {
+      setAttributes( { mediaCaption: newMediaCaption } );
+    };
     const mediaTextGeneralSettings = (
       <PanelBody title={ __( 'Media & Text settings' ) }>
         { mediaType === 'image' && (
@@ -213,6 +220,11 @@ class MediaTextEdit extends Component {
             }
           />
         ) }
+        <TextareaControl
+          label={ __( 'Caption' ) }
+          value={ mediaCaption }
+          onChange={ onMediaCaptionChange }
+        />
       </PanelBody>
     );
 
