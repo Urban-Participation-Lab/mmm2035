@@ -1,14 +1,17 @@
 @import '../../../../../variables.scss';
 
-// This component is not mobile-first!
-
 .wp-block-mmm35-media-text {
   background-color: $grey-1;
   display: flex;
+  flex-direction: column;
+
+  @at-root .wp-block-column > & {
+    height: 100%;
+  }
 
   &__media {
     flex-basis: 40%;
-    max-width: 50%;
+    max-width: unset;
     margin: 0;
 
     img {
@@ -23,14 +26,22 @@
     flex-basis: 50%;
     flex-grow: 1;
     align-self: center;
+    text-align: center;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &.has-media-on-the-right {
     & > .wp-block-mmm35-media-text__media {
-      order: 2;
-    }
-    & .wp-block-mmm35-media-text__content {
       order: 1;
+    }
+    & > .block-editor-inner-blocks {
+      order: 2;
     }
   }
 
@@ -42,24 +53,45 @@
     padding: 0 8% 0 8%;
   }
 
-  @media (max-width: $tablet-min) {
-    flex-direction: column;
+  @media (min-width: $tablet-min) {
+    flex-direction: row;
 
     &__content {
-      padding: 16px;
+      padding: 64px;
+      text-align: left;
     }
 
-    &__media {
-      max-width: unset;
+    &:not(.has-media-on-the-top) &__media {
+      max-width: 50%;
+    }
+
+    &.has-media-on-the-top {
+      flex-direction: column;
+
+      .wp-block-mmm35-media-text__media {
+        flex-basis: 345px;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      .wp-block-mmm35-media-text__content {
+        text-align: center;
+      }
     }
 
     &.has-media-on-the-right {
       & > .wp-block-mmm35-media-text__media {
-        order: 1;
-      }
-      & > .block-editor-inner-blocks {
         order: 2;
       }
+      & > .wp-block-mmm35-media-text__content {
+        order: 1;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-min) {
+    &__content {
+      padding: 128px;
     }
   }
 }
