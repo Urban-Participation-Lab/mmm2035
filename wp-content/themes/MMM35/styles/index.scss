@@ -18,6 +18,7 @@ html {
   color: $foreground;
 
   font-size: 16px;
+  line-height: 1.75em;
   @media screen and (min-width: $wp-admin-bar-breakpoint) { 
     font-size: 22px;
   }
@@ -34,6 +35,7 @@ body {
 
 @import './alignment.scss';
 @import './figure.scss';
+@import './spacings.scss';
 
 @import './head.scss';
 @import './navigation.scss';

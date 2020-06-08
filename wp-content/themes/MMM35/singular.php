@@ -9,13 +9,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 get_header();
 
+$has_featured_images = false;
 if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multiple_featured_images ) ) {
   $smfi_api = $simple_multiple_featured_images -> get_public_api();
+  if (isset($smfi_api) && $smfi_api->is_smfi_showed() ) {
+    $featured_image_ids = $smfi_api->get_all_featured_image_ids( get_the_ID(), 'full', [ 'class' => 'mmm35-hero__image' ] );
+    $has_featured_images = count( $featured_image_ids ) > 0;
+  }
 }
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <header class="mmm35-hero">
+  <header class="mmm35-hero <?php if ( has_post_thumbnail() || $has_featured_images ) { echo 'mmm35-hero_has-image'; } ?>">
     <h1 class="mmm35-hero__title"><?php the_title(); ?></h1>
     <?php if ( has_post_thumbnail() ) : ?>
       <figure class="mmm35-hero__figure mmm35-figure">
@@ -23,11 +28,9 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
         <figcaption class="mmm35-figure__caption"><?php the_post_thumbnail_caption(); ?></figcaption>
       </figure> 
     <?php
-      elseif (isset($smfi_api) && $smfi_api->is_smfi_showed()) :
-        $featured_image_ids = $smfi_api->get_all_featured_image_ids( get_the_ID(), 'full', [ 'class' => 'mmm35-hero__image' ] );
-        if ( count( $featured_image_ids ) > 0 ) :
-          foreach ($featured_image_ids as $id) :
-            $caption = $smfi_api->get_image_caption_by_id( $id );
+      elseif ( $has_featured_images ) :
+        foreach ($featured_image_ids as $id) :
+          $caption = $smfi_api->get_image_caption_by_id( $id );
     ?>
       <figure class="mmm35-hero__figure mmm35-figure">
         <?php echo $smfi_api->get_featured_image_tag( $id, 'full', [ 'class' => 'mmm35-hero__image' ] ); ?>
@@ -49,11 +52,12 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
         }
         setInterval(nextImage, 5000);
       </script>
-    <?php endif; endif; ?>
+    <?php endif; ?>
   </header>
   <main class="mmm35-main mmm35-post">
     <?php the_content(); ?>
   </main>
+  <?php get_template_part( 'template-parts/category-item-list' ) ?>
 <?php endwhile; endif; ?>
 
 <?php

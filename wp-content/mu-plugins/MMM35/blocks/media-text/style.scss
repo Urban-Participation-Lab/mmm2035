@@ -4,9 +4,10 @@
   background-color: $grey-1;
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
 
   @at-root .wp-block-column > & {
-    height: 100%;
+    align-self: stretch;
   }
 
   &__media {
@@ -70,6 +71,8 @@
 
       .wp-block-mmm35-media-text__media {
         flex-basis: 345px;
+        max-height: 345px;
+        min-height: 345px;
         flex-grow: 0;
         flex-shrink: 0;
       }
