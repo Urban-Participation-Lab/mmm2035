@@ -2,6 +2,9 @@
   background: $background;
   list-style: none;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -9,8 +12,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  justify-content: center;
-  align-items: center;
 
   &_footer #{&}__item-link {
     text-decoration: none;
@@ -26,6 +27,7 @@
     font-weight: normal;
     text-transform: none;
     font-size: 1.8rem;
+    margin: 2rem;
     display: flex;
     color: $foreground;
 
@@ -41,8 +43,10 @@
   @media screen and (min-width: $tablet-min) {
     position: static;
     background: transparent;
+    flex-direction: row;
 
     &__item {
+      margin: 0;
       font-weight: inherit;
       text-transform: inherit;
       font-size: inherit;
