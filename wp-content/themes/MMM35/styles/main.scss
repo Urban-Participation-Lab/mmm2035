@@ -2,27 +2,8 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  background: $background;
-  padding: 16px;
-
-  @media screen and (min-width: $tablet-min) {
-    padding: 64px;
-  }
-
-  > * {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    width: 100%;
-    max-width: 1440px;
-  }
 
   figure {
     text-align: center;
   }
-}
-
-.mmm35-hero_has-image + .mmm35-main {
-  margin-top: $hero-height;
 }

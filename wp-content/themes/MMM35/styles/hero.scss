@@ -14,9 +14,9 @@
     font-size: 3rem;
 
     &-dot {
-      &_green { color: green; }
-      &_lightblue { color: lightblue; }
-      &_darkblue { color: darkblue; }
+      &_green { color: $ci-green; }
+      &_lightblue { color: $ci-lightblue; }
+      &_darkblue { color: $ci-darkblue; }
     }
   }
 

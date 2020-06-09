@@ -23,7 +23,7 @@
   }
 
   &__content {
-    padding: 32px;
+    padding: 2rem;
     flex-basis: 50%;
     flex-grow: 1;
     align-self: center;
@@ -58,7 +58,7 @@
     flex-direction: row;
 
     &__content {
-      padding: 64px;
+      padding: 3rem;
       text-align: left;
     }
 
@@ -70,9 +70,9 @@
       flex-direction: column;
 
       .wp-block-mmm35-media-text__media {
-        flex-basis: 345px;
-        max-height: 345px;
-        min-height: 345px;
+        flex-basis: 14rem;
+        max-height: 14rem;
+        min-height: 14rem;
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -94,7 +94,7 @@
 
   @media (min-width: $desktop-min) {
     &__content {
-      padding: 128px;
+      padding: 5rem;
     }
   }
 }

@@ -63,11 +63,16 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
       </script>
     <?php endif; ?>
   </header>
-  <main class="mmm35-main mmm35-post">
-    <?php the_content(); ?>
-  </main>
-  <?php get_template_part( 'template-parts/category-item-list' ) ?>
-<?php endwhile; endif; ?>
+  <div class="mmm35-page">
+    <main class="mmm35-main mmm35-post">
+      <?php the_content(); ?>
+    </main>
+    <?php get_template_part( 'template-parts/category-item-list' ) ?>
 
+    <?php if ( is_front_page() ) : ?>
+      <?php get_template_part( 'template-parts/partners' ) ?>
+    <?php endif; ?>
+  </div>
+<?php endwhile; endif; ?>
 <?php
-get_footer();
+  get_footer();

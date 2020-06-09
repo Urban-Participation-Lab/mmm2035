@@ -1,0 +1,26 @@
+.mmm35-page {
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding: 1rem;
+
+  > * {
+    width: calc(100% - 2rem);
+    margin: 0;
+    max-width: 1440px;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    padding: 3rem;
+
+    > * {
+      margin: 0 auto;
+    }
+  }
+}
+
+.mmm35-hero_has-image + .mmm35-page {
+  margin-top: $hero-height;
+}

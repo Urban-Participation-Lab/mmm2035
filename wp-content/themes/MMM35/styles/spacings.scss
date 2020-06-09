@@ -2,6 +2,8 @@
   margin-bottom: 0;
 }
 
-.wp-block-column:not(:first-child) {
-  margin-left: 2rem;
+@media screen and (min-width: $wp-columns-breakpoint) {
+  .wp-block-column:not(:first-child) {
+    margin-left: 2rem;
+  }
 }

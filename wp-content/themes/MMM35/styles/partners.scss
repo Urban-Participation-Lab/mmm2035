@@ -1,0 +1,28 @@
+.mmm35-partners {
+  background-color: $grey-1;
+  padding: 2rem;
+  margin-top: 2rem;
+
+  @media screen and (min-width: $tablet-min) {
+    padding: 3rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    
+    img {
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width: $tablet-min) {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      img:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
