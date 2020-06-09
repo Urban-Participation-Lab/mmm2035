@@ -1,7 +1,12 @@
 /**
+ * External dependencies
+ */
+import classnames from 'classnames';
+
+/**
  * WordPress dependencies
  */
-import { ResizableBox, withNotices } from '@wordpress/components';
+import { withNotices } from '@wordpress/components';
 import {
   BlockControls,
   BlockIcon,
@@ -34,15 +39,6 @@ export function imageFillStyles( url, focalPoint ) {
     : {};
 }
 
-function ResizableBoxContainer( { isSelected, isStackedOnMobile, ...props } ) {
-  const isMobile = useViewportMatch( 'small', '<' );
-  return (
-    <ResizableBox
-      showHandle={ isSelected && ( ! isMobile || ! isStackedOnMobile ) }
-      { ...props }
-    />
-  );
-}
 class MediaContainer extends Component {
   constructor() {
     super( ...arguments );
@@ -85,9 +81,9 @@ class MediaContainer extends Component {
     return (
       <>
         { this.renderToolbarEditButton() }
-        <figure className={ className } style={ backgroundStyles }>
+        <figure className={ className + ' mmm35-figure' } style={ backgroundStyles }>
           <img src={ mediaUrl } alt={ mediaAlt } />
-          <figcaption>{mediaCaption}</figcaption>
+          <figcaption className="mmm35-figure__caption">{mediaCaption}</figcaption>
         </figure>
       </>
     );
@@ -95,12 +91,13 @@ class MediaContainer extends Component {
 
   renderVideo() {
     const { mediaUrl, className } = this.props;
+    console.log(className);
     return (
       <>
         { this.renderToolbarEditButton() }
-        <figure className={ className }>
+        <figure className={ className + ' mmm35-figure' }>
           <video controls src={ mediaUrl } />
-          <figcaption>{mediaCaption}</figcaption>
+          <figcaption className="mmm35-figure__caption">{mediaCaption}</figcaption>
         </figure>
       </>
     );

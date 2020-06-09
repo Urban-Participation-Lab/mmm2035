@@ -5,7 +5,7 @@ module.exports = {
   ...defaultConfig,
   entry: {
     'button': './blocks/button/index',
-    'introduction': './blocks/introduction/index',
+    'highlight': './blocks/highlight/index',
     'media-text': './blocks/media-text/index',
   },
   output: {

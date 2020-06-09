@@ -1,14 +1,49 @@
 .mmm35-hero {
-  position: fixed;
+  margin: 0;
   top: $head-height;
   left: 0;
   right: 0;
-  height: $hero-height;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 
-  &__image {
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__figure {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: 100%;
     width: 100%;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+
+    &_hidden {
+      opacity: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+  }
+
+  &_has-image {
+    height: $hero-height;
+    position: fixed;
+
+    .mmm35-hero__title {
+      color: $background;
+      text-shadow: 0px 0px 5px $grey-2;
+      z-index: 1;
+    }
   }
 }

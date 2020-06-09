@@ -16,4 +16,8 @@
   background: linear-gradient(to right, transparent 0%, white 30%);
   font-size: 0.5rem;
   margin: 0;
+
+  &:empty {
+    display: none;
+  }
 }

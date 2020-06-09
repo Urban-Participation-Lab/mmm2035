@@ -28,7 +28,7 @@ get_header();
         <?php endif; ?>
         <div class="mmm35-post-list__item-category">Projekt</div>
         <h2 class="mmm35-post-list__item-title"><?php the_title(); ?></h2>
-        <?php echo wp_trim_words( the_content(), 15, '...' ); ?>
+        <p><?php echo wp_trim_words( wp_strip_all_tags( get_the_content() ), 15, '...' ); ?></p>
       </a>
     <?php endwhile; else : ?>
       <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>

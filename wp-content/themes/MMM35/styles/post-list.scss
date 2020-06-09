@@ -4,6 +4,16 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 0.5rem;
+  background: $background;
+  width: 100%;
+  max-width: 1440px;
+
+  &__title {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    flex-basis: 100%;
+    flex-shrink: 0;
+  }
 
   &__item {
     flex-basis: 375px;
@@ -30,6 +40,8 @@
     &-image {
       width: 100%;
       height: 345px;
+      max-height: 345px;
+      min-height: 345px;
       margin: 0;
       margin-bottom: 0.5rem;
 

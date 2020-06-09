@@ -56,8 +56,8 @@ function mmm35_media_text_init() {
       ),
       "mediaCaption" => array(
               "type" => "string",
-              "source" => "attribute",
-              "selector" => "figure figcaption",
+              "source" => "html",
+              "selector" => "figcaption",
               "default" => ""
       ),
       "mediaPosition" => array(
