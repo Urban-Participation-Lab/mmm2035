@@ -43,4 +43,5 @@ steps:
         - ./wp-content/themes/MMM35/*.png
         - ./wp-content/themes/MMM35/template-parts/*
         - ./wp-content/themes/MMM35/classes/*
+        - ./wp-content/themes/MMM35/assets/*
       target: /home/webpxck7g/html/mmm35.b12f.io/
