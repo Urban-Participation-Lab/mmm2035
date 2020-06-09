@@ -21,7 +21,16 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <header class="mmm35-hero <?php if ( has_post_thumbnail() || $has_featured_images ) { echo 'mmm35-hero_has-image'; } ?>">
-    <h1 class="mmm35-hero__title"><?php the_title(); ?></h1>
+    <?php if ( is_front_page() ) : ?>
+      <h1 class="mmm35-hero__title">
+        mobile Vielfalt<br />
+        entdecken<span class="mmm35-hero__title-dot mmm35-hero__title-dot_green">.</span>
+        erfahren<span class="mmm35-hero__title-dot mmm35-hero__title-dot_lightblue">.</span>
+        erleben<span class="mmm35-hero__title-dot mmm35-hero__title-dot_darkblue">.</span>
+      </h1>
+    <?php else : ?>
+      <h1 class="mmm35-hero__title"><?php the_title(); ?></h1>
+    <?php endif; ?>
     <?php if ( has_post_thumbnail() ) : ?>
       <figure class="mmm35-hero__figure mmm35-figure">
         <?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'mmm35-hero__image' ] ); ?>

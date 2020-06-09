@@ -8,9 +8,16 @@
   justify-content: center;
   align-items: center;
   height: auto;
+  text-align: center;
 
   &__title {
     font-size: 3rem;
+
+    &-dot {
+      &_green { color: green; }
+      &_lightblue { color: lightblue; }
+      &_darkblue { color: darkblue; }
+    }
   }
 
   &__figure {

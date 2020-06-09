@@ -12,7 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
   <a
     href="/"
     class="mmm35-head__logo"
-  ><?php echo get_bloginfo( 'name' ) ?></a> 
+  >
+    <img
+      src="<?php echo get_template_directory_uri(); ?>/assets/move-logo.png"
+      alt="Logo MoVe"
+    />
+  </a> 
 
   <?php if ( has_nav_menu( 'primary' ) ) { ?>
     <button

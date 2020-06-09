@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'NeutraText';
+  src: url('./assets/fonts/NeutraText-Bold.otf') format('opentype');
+  font-weight: 500 600;
+}
+
+@font-face {
+  font-family: 'NeutraText';
+  src: url('./assets/fonts/NeutraText-Book.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'NeutraText';
+  src: url('./assets/fonts/NeutraText-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+html {
+  font-family: NeutraText, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}

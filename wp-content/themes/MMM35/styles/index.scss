@@ -10,15 +10,16 @@ Version: 1.0.0
 
 * {
   box-sizing: border-box;
+  line-height: 1.75em;
 }
 
+@import './font.scss';
+
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
   background: $background;
   color: $foreground;
-
   font-size: 16px;
-  line-height: 1.75em;
+
   @media screen and (min-width: $wp-admin-bar-breakpoint) { 
     font-size: 22px;
   }

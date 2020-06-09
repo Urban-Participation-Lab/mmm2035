@@ -8,14 +8,10 @@
   height: $head-height;
   display: flex;
   font-size: 24px;
-  text-transform: uppercase;
   font-weight: bold;
   padding: 0.5rem;
   z-index: 10;
-
-  &__logo {
-    color: $accent;
-  }
+  font-weight: 300;
 
   &__logo,
   &__mobile-nav-toggle,
@@ -37,6 +33,16 @@
 
     &:hover {
       opacity: 0.6;
+    }
+  }
+
+  &__logo {
+    color: $accent;
+    height: 120px;
+    padding-top: 0;
+
+    img {
+      height: 100%;
     }
   }
 

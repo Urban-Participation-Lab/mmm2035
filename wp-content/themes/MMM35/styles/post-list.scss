@@ -7,6 +7,11 @@
   background: $background;
   width: 100%;
   max-width: 1440px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &__title {
     margin-left: 0.5rem;
@@ -30,11 +35,8 @@
     margin: 0.5rem;
 
     > * {
-      margin: 2rem;
-
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
 
     &-image {
@@ -43,7 +45,6 @@
       max-height: 345px;
       min-height: 345px;
       margin: 0;
-      margin-bottom: 0.5rem;
 
       img {
         object-fit: cover;
@@ -52,8 +53,13 @@
       }
     }
 
+    &-meta {
+      margin-top: 1rem;
+    }
+
     &-title {
       color: $accent;
+      margin-top: 0;
     }
   }
 

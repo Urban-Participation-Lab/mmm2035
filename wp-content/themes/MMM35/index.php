@@ -26,7 +26,16 @@ get_header();
             <figcaption class="mmm35-figure__caption"><?php the_post_thumbnail_caption(); ?></figcaption>
           </figure>
         <?php endif; ?>
-        <div class="mmm35-post-list__item-category">Projekt</div>
+        <?php
+          $types = get_post_meta( $post->ID, 'type' );
+          $dates = get_post_meta( $post->ID, 'date' );
+          $meta = array();
+          if (!empty($types)) { array_push( $meta, implode( $types, ', ' ) ); }
+          if (!empty($dates)) { array_push( $meta, implode( $dates, ', ' ) ); }
+          if (!empty($meta)) :
+        ?>
+          <div class="mmm35-post-list__item-meta"><?php echo implode($meta, ', '); ?></div>
+        <?php endif; ?>
         <h2 class="mmm35-post-list__item-title"><?php the_title(); ?></h2>
         <p><?php echo wp_trim_words( wp_strip_all_tags( get_the_content() ), 15, '...' ); ?></p>
       </a>

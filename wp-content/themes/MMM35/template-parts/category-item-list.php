@@ -32,10 +32,10 @@ $posts = get_posts(array( 'numberposts' => 10, 'category' => $category->cat_ID )
       <?php endif; ?>
       <?php
         $types = get_post_meta( $post->ID, 'type' );
-        $years = get_post_meta( $post->ID, 'year' );
+        $dates = get_post_meta( $post->ID, 'date' );
         $meta = array();
         if (!empty($types)) { array_push( $meta, implode( $types, ', ' ) ); }
-        if (!empty($years)) { array_push( $meta, implode( $years, ', ' ) ); }
+        if (!empty($dates)) { array_push( $meta, implode( $dates, ', ' ) ); }
         if (!empty($meta)) :
       ?>
         <div class="mmm35-post-list__item-meta"><?php echo implode($meta, ', '); ?></div>
