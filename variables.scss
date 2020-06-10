@@ -18,4 +18,5 @@ $grey-1: #FAFAFA;
 $grey-2: rgba(0, 0, 0, 0.29);
 
 $head-height: 3.8rem;
-$hero-height: 80vh;
+$hero-height: 70vh;
+$hero-height-home: calc(100vh - #{$head-height});

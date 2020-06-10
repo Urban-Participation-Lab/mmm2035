@@ -25,5 +25,9 @@
         margin-right: 2rem;
       }
     }
+
+    @media screen and (min-width: $tablet-min) {
+      justify-content: space-between;
+    }
   }
 }

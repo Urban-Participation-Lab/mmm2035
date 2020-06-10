@@ -7,7 +7,8 @@
   margin-top: 2rem;
 
   @at-root .wp-block-column > & {
-    align-self: stretch;
+    height: 100%;
+    margin-top: 0rem;
   }
 
   &__media {

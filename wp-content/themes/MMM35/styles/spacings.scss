@@ -1,9 +1,15 @@
 .wp-block-columns {
   margin-bottom: 0;
-}
+  margin-top: 2rem;
 
-@media screen and (min-width: $wp-columns-breakpoint) {
-  .wp-block-column:not(:first-child) {
-    margin-left: 2rem;
+  > .wp-block-column:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  @media screen and (min-width: $wp-columns-breakpoint) {
+    > .wp-block-column:not(:first-child) {
+      margin-left: 2rem;
+      margin-top: 0;
+    }
   }
 }
