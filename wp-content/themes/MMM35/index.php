@@ -23,7 +23,7 @@ $index = 0;
           href="<?php the_permalink(); ?>"
           title="<?php the_title_attribute(); ?>"
           class="mmm35-post-list__item animate"
-          data-josh-anim-name="fadeInUp"
+          data-josh-anim-name="fadeInUpOpague"
           data-josh-duration="400ms"
           data-josh-delay="<?php echo $index * 50 ?>ms"
         >

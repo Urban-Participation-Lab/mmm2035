@@ -24,7 +24,7 @@ $posts = get_posts(array( 'numberposts' => 10, 'category' => $category->cat_ID )
       href="<?php the_permalink( $post->ID ); ?>"
       title="<?php the_title_attribute($post->ID); ?>"
       class="mmm35-post-list__item animate"
-      data-josh-anim-name="fadeInUp"
+      data-josh-anim-name="fadeInUpOpague"
       data-josh-duration="400ms"
       data-josh-anim-delay="<?php echo $index * 50 ?>ms"
     >
