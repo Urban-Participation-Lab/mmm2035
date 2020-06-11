@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   mode: "production", // "production" | "development" | "none"
-  // Chosen mode tells webpack to use its built-in optimizations accordingly.
   entry: {
     main: "./js/main.js",
   },
@@ -10,11 +9,12 @@ module.exports = {
   output: {
     path: __dirname,
     filename: "[name].js",
-    publicPath: "/", // string
+    publicPath: "/wp-content/themes/MMM35/",
   },
 
   resolve: {
-    modules: [path.resolve(__dirname, 'node_modules')],
+    modules: ['node_modules'],
+    alias: {},
   },
 
   module: {
@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         include: [
-          path.resolve(__dirname, "js")
+          path.resolve(__dirname, "js"),
         ],
         exclude: [
           path.resolve(__dirname, "node_modules")
