@@ -32,7 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         });
       });
     </script>
-    <ul class="mmm35-nav">
     <?php
       wp_nav_menu(
         array(
@@ -43,20 +42,6 @@ if ( ! defined( 'ABSPATH' ) ) {
           'walker' => new MMM35WalkerNavMenu(),
         )
       );
-
-      if ( class_exists( 'WPGlobus' ) ) {
-          foreach( WPGlobus::Config()->enabled_languages as $lang ) {
-            if ( $lang == WPGlobus::Config()->language ) {
-              continue;
-            }
-            $flag = WPGlobus::Config()->flags_url . WPGlobus::Config()->flag[ $lang ];
-            echo '<li class="mmm35-nav__item mmm35-nav__item-lang"><a class="mmm35-nav__item-link" href="' . WPGlobus_Utils::localize_current_url( $lang ). '">';
-            echo $lang;
-            echo '</a></li>';
-
-          }
-      }
     ?>
-    </ul>
   <?php } ?>
 </nav>
