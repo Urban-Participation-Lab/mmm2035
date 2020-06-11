@@ -32,7 +32,6 @@ body {
   flex-direction: column;
 }
 
-@import './alignment.scss';
 @import './figure.scss';
 @import './spacings.scss';
 @import './animations.scss';
@@ -46,3 +45,5 @@ body {
 @import './post-list.scss';
 @import './partners.scss';
 @import './footer.scss';
+
+@import './alignment.scss';

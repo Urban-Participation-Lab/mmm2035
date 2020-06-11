@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
 }
 ?>
-<div class="mmm35-partners">
+<div class="mmm35-partners alignfull">
   <h2>Mitwirkende</h2>
   <div class="mmm35-partners__list">
     <img

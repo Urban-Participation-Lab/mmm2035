@@ -1,24 +1,27 @@
 .mmm35-post-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0.5rem;
-  background: $background;
-  width: 100%;
-  max-width: 1440px;
+  margin-top: 2rem;
 
   &__title {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     flex-basis: 100%;
     flex-shrink: 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
   }
 
   &__item {
     flex-basis: 375px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: 500px;
+    max-width: 800px;
     min-width: 250px;
     display: flex;
     flex-direction: column;

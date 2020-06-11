@@ -8,7 +8,7 @@
 
   > * {
     margin: 0;
-    max-width: 1440px;
+    max-width: $max-page-width;
   }
 
   @media screen and (min-width: $tablet-min) {

@@ -1,6 +1,9 @@
 .alignwide,
 .alignfull {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: calc(100vw - 4rem);
+  max-width: unset;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }

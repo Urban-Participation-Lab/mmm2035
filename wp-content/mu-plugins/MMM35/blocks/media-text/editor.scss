@@ -3,6 +3,9 @@
 .wp-block-mmm35-media-text {
   background-color: $grey-1;
   display: flex;
+  margin: 0;
+  transform: none;
+  width: 100%;
 
   &__media {
     flex-basis: 40%;

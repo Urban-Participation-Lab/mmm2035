@@ -18,6 +18,7 @@ $posts = get_posts(array( 'numberposts' => 10, 'category' => $category->cat_ID )
 ?>
 <div class="mmm35-post-list">
   <h2 class="mmm35-post-list__title">Weitere <?php echo $category->name ?></h2>
+  <div class="mmm35-post-list__items">
   <?php foreach ( $posts as $index=>$post ) : ?>
     <a
       href="<?php the_permalink( $post->ID ); ?>"
@@ -47,4 +48,5 @@ $posts = get_posts(array( 'numberposts' => 10, 'category' => $category->cat_ID )
       <p><?php echo wp_trim_words( wp_strip_all_tags( get_the_content( $post->ID ) ), 15, '...' ); ?></p>
     </a>
   <?php endforeach; ?>
+  </div>
 </div>
