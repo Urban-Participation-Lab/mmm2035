@@ -8,17 +8,22 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
 }
 get_header();
+
+$index = 0;
 ?>
 
 <main class="mmm35-main">
   <header></header>
   
   <div class="mmm35-post-list">
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); $index++; ?>
       <a
         href="<?php the_permalink(); ?>"
         title="<?php the_title_attribute(); ?>"
-        class="mmm35-post-list__item"
+        class="mmm35-post-list__item animate"
+        data-josh-anim-name="fadeInUp"
+        data-josh-duration="400ms"
+        data-josh-delay="<?php echo $index * 50 ?>ms"
       >
         <?php if (has_post_thumbnail()) : ?>
           <figure class="mmm35-figure mmm35-post-list__item-image">

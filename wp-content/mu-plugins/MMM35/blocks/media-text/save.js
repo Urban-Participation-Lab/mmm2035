@@ -56,10 +56,15 @@ export default function save( { attributes } ) {
     'has-media-on-the-right': 'right' === mediaPosition,
     'has-media-on-the-top': 'top' === mediaPosition,
     'has-media-on-the-left': 'left' === mediaPosition,
+    'animate': true,
   } );
 
   return (
-    <div className={ className }>
+    <div
+      className={ className }
+      data-josh-anim-name="fadeInUp"
+      data-josh-duration="400ms"
+    >
       <figure className="mmm35-figure wp-block-mmm35-media-text__media">
         { ( mediaTypeRenders[ mediaType ] || noop )() }
         <figcaption className="mmm35-figure__caption">{mediaCaption}</figcaption>

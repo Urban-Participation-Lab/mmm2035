@@ -20,6 +20,12 @@ html {
   font-family: NeutraText, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-h1, h2, h3 {
+h1 {
   font-weight: 500;
+}
+
+h2,
+h3,
+.has-large-font-size {
+  font-weight: 400;
 }

@@ -18,11 +18,14 @@ $posts = get_posts(array( 'numberposts' => 10, 'category' => $category->cat_ID )
 ?>
 <div class="mmm35-post-list">
   <h2 class="mmm35-post-list__title">Weitere <?php echo $category->name ?></h2>
-  <?php foreach ( $posts as $post ) : ?>
+  <?php foreach ( $posts as $index=>$post ) : ?>
     <a
       href="<?php the_permalink( $post->ID ); ?>"
       title="<?php the_title_attribute($post->ID); ?>"
-      class="mmm35-post-list__item"
+      class="mmm35-post-list__item animate"
+      data-josh-anim-name="fadeInUp"
+      data-josh-duration="400ms"
+      data-josh-anim-delay="<?php echo $index * 50 ?>ms"
     >
       <?php if (has_post_thumbnail( $post->ID )) : ?>
         <figure class="mmm35-figure mmm35-post-list__item-image">

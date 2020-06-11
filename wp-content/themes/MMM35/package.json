@@ -30,6 +30,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "joshjs": "^1.0.5",
     "reset.css": "^2.0.2",
     "three": "^0.116.1"
   }

@@ -32,11 +32,10 @@ body {
   flex-direction: column;
 }
 
-@import 'reset.css';
-
 @import './alignment.scss';
 @import './figure.scss';
 @import './spacings.scss';
+@import './animations.scss';
 
 @import './head.scss';
 @import './navigation.scss';

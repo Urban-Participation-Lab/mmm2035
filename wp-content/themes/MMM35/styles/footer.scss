@@ -8,12 +8,15 @@
   background: $background;
   font-size: 0.8rem;
 
+  > * {
+    margin: 1rem 0;
+  }
+
   &__nav {
     display: flex;
     flex-direction: row;
     list-style: none;
     flex-wrap: wrap;
-    margin: 0;
     padding: 0;
 
     a {
