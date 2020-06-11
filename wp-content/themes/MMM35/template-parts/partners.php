@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       class="animate"
       data-josh-anim-name="fadeInUp"
       data-josh-duration="400ms"
+      data-josh-anim-delay="400ms"
     />
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/partners/orange-edge.png"
@@ -24,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       class="animate"
       data-josh-anim-name="fadeInUp"
       data-josh-duration="400ms"
-      data-josh-anim-delay="100ms"
+      data-josh-anim-delay="500ms"
     />
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/partners/ssp.png"
@@ -32,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       class="animate"
       data-josh-anim-name="fadeInUp"
       data-josh-duration="400ms"
-      data-josh-anim-delay="200ms"
+      data-josh-anim-delay="600ms"
     />
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/partners/jes.png"
@@ -40,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       class="animate"
       data-josh-anim-name="fadeInUp"
       data-josh-duration="400ms"
-      data-josh-anim-delay="300ms"
+      data-josh-anim-delay="700ms"
     />
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/partners/uplab.png"
@@ -48,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       class="animate"
       data-josh-anim-name="fadeInUp"
       data-josh-duration="400ms"
-      data-josh-anim-delay="400ms"
+      data-josh-anim-delay="800ms"
     />
   </div>
 </div>
