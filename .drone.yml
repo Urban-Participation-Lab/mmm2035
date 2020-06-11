@@ -41,6 +41,7 @@ steps:
         - ./wp-content/themes/MMM35/*.php
         - ./wp-content/themes/MMM35/*.css
         - ./wp-content/themes/MMM35/*.png
+        - ./wp-content/themes/MMM35/*.js
         - ./wp-content/themes/MMM35/template-parts/*
         - ./wp-content/themes/MMM35/classes/*
         - ./wp-content/themes/MMM35/assets/*
