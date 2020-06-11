@@ -68,7 +68,7 @@ export default function save( { attributes } ) {
         className="wp-block-mmm35-media-text__content animate"
         data-josh-anim-name="fadeInUp"
         data-josh-duration="800ms"
-        data-josh-anim-delay="200ms"
+        data-josh-anim-delay="400ms"
       >
         <InnerBlocks.Content />
       </div>
