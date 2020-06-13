@@ -38,11 +38,15 @@
 
   &__logo {
     color: $accent;
-    height: 120px;
+    height: 90px;
     padding-top: 0;
 
     img {
       height: 100%;
+    }
+
+    @media screen and (min-width: $tablet-min) {
+      height: 120px;
     }
   }
 

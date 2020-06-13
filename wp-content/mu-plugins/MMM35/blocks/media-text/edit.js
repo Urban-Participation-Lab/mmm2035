@@ -55,12 +55,10 @@ class MediaTextEdit extends Component {
 
     this.onSelectMedia = this.onSelectMedia.bind( this );
     this.state = { };
-    this.onSetHref = this.onSetHref.bind( this );
   }
 
   onSelectMedia( media ) {
     const { setAttributes } = this.props;
-    const { linkDestination, href } = this.props.attributes;
 
     let mediaType;
     let src;
@@ -90,31 +88,13 @@ class MediaTextEdit extends Component {
         ] );
     }
 
-    let newHref = href;
-    if ( linkDestination === LINK_DESTINATION_MEDIA ) {
-      // Update the media link.
-      newHref = media.url;
-    }
-
-    // Check if the image is linked to the attachment page.
-    if ( linkDestination === LINK_DESTINATION_ATTACHMENT ) {
-      // Update the media link.
-      newHref = media.link;
-    }
-
     setAttributes( {
       mediaAlt: media.alt,
       mediaId: media.id,
       mediaType,
       mediaCaption: media.caption,
       mediaUrl: src || media.url,
-      mediaLink: media.link || undefined,
-      href: newHref,
     } );
-  }
-
-  onSetHref( props ) {
-    this.props.setAttributes( props );
   }
 
   renderMediaArea() {
@@ -161,8 +141,6 @@ class MediaTextEdit extends Component {
       mediaCaption,
       mediaUrl,
       rel,
-      href,
-      linkTarget,
       linkClass,
       linkDestination,
     } = attributes;
@@ -235,21 +213,6 @@ class MediaTextEdit extends Component {
         </InspectorControls>
         <BlockControls>
           <ToolbarGroup controls={ toolbarControls } />
-          { mediaType === 'image' && (
-            <ToolbarGroup>
-              <ImageURLInputUI
-                url={ href || '' }
-                onChangeUrl={ this.onSetHref }
-                linkDestination={ linkDestination }
-                mediaType={ mediaType }
-                mediaUrl={ image && image.source_url }
-                mediaLink={ image && image.link }
-                linkTarget={ linkTarget }
-                linkClass={ linkClass }
-                rel={ rel }
-              />
-            </ToolbarGroup>
-          ) }
         </BlockControls>
         <div className={ classNames }>
           { this.renderMediaArea() }

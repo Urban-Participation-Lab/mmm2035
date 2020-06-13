@@ -48,60 +48,36 @@ function mmm35_media_text_init() {
     'style'   => 'mmm35-media-text',
     'attributes'  => array(
       "mediaAlt" => array(
-              "type" => "string",
-              "source" => "attribute",
-              "selector" => "figure img",
-              "attribute" => "alt",
-              "default" => ""
-      ),
-      "mediaCaption" => array(
-              "type" => "string",
-              "source" => "html",
-              "selector" => "figcaption",
-              "default" => ""
-      ),
-      "mediaPosition" => array(
-              "type" => "string",
-              "default" => "left"
-      ),
-      "mediaId" => array(
-              "type" => "number"
-      ),
-      "mediaUrl" => array(
-              "type" => "string",
-              "source" => "attribute",
-              "selector" => "figure video,figure img",
-              "attribute" => "src"
-      ),
-      "mediaLink" => array(
-              "type" => "string"
-      ),
-      "linkDestination" => array(
-              "type" => "string"
-      ),
-      "linkTarget" => array(
-              "type" => "string",
-              "source" => "attribute",
-              "selector" => "figure a",
-              "attribute" => "target"
-      ),
-      "href" => array(
         "type" => "string",
         "source" => "attribute",
-        "selector" => "figure a",
-        "attribute" => "href"
+        "selector" => "figure img",
+        "attribute" => "alt",
+        "default" => ""
+      ),
+      "mediaCaption" => array(
+        "type" => "string",
+        "source" => "html",
+        "selector" => "figure figcaption",
+        "default" => ""
+      ),
+      "mediaPosition" => array(
+        "type" => "string",
+        "default" => "left"
+      ),
+      "mediaId" => array(
+        "type" => "number"
+      ),
+      "mediaUrl" => array(
+        "type" => "string",
+        "source" => "attribute",
+        "selector" => "figure video,figure img",
+        "attribute" => "src"
       ),
       "rel" => array(
         "type" => "string",
         "source" => "attribute",
         "selector" => "figure a",
         "attribute" => "rel"
-      ),
-      "linkClass" => array(
-        "type" => "string",
-        "source" => "attribute",
-        "selector" => "figure a",
-        "attribute" => "class"
       ),
       "mediaType" => array(
         "type" => "string"

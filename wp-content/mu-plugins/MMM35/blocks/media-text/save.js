@@ -17,36 +17,28 @@ export default function save( { attributes } ) {
     mediaType,
     mediaUrl,
     mediaId,
-    href,
-    linkTarget,
     rel,
   } = attributes;
   const newRel = isEmpty( rel ) ? undefined : rel;
 
-  let image = (
-    <img
-      src={ mediaUrl }
-      alt={ mediaAlt }
-      className={
-        mediaId && mediaType === 'image'
-          ? `wp-image-${ mediaId }`
-          : null
-      }
-    />
+  const image = (
+    <a
+      href={ mediaUrl }
+      class="wp-block-mmm35-media-text__media-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src={ mediaUrl }
+        alt={ mediaAlt }
+        className={
+          mediaId && mediaType === 'image'
+            ? `wp-image-${ mediaId }`
+            : null
+        }
+      />
+    </a>
   );
-
-  if ( href ) {
-    image = (
-      <a
-        className={ linkClass }
-        href={ href }
-        target={ linkTarget }
-        rel={ newRel }
-      >
-        { image }
-      </a>
-    );
-  }
 
   const mediaTypeRenders = {
     image: () => image,

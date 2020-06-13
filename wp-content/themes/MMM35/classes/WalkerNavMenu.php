@@ -29,10 +29,11 @@ class MMM35WalkerNavMenu extends Walker_Nav_Menu {
 
     $is_image_link = strpos($title, 'wp-content/uploads') !== false;
 
-    $output .= sprintf( "\n<li class=\"" . $class_names . " " . $this->baseClass . "__item%s%s\"><a href=\"%s\" rel=\"noreferrer noopener\" class=\"" . $this->baseClass . "__item-link\">%s</a></li>\n",
+    $output .= sprintf( "\n<li class=\"" . $class_names . " " . $this->baseClass . "__item%s%s\"><a href=\"%s\" %s class=\"" . $this->baseClass . "__item-link\">%s</a></li>\n",
       $item->current ? ' ' . $this->baseClass . '__item_current' : '',
       $is_image_link ? ' ' . $this->baseClass . '__item_image' : '',
       $item->url,
+      $item->object === 'custom' ? 'target="_blank" rel="noreferrer noopener"': '',
       $title
     );
   }
