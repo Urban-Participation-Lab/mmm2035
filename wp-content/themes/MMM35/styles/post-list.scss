@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0.5rem;
     margin-left: -1rem;
     margin-right: -1rem;
@@ -23,10 +23,9 @@
   }
 
   &__item {
-    flex-basis: 375px;
+    flex-basis: 100%;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: 800px;
     min-width: 250px;
     display: flex;
     flex-direction: column;
@@ -37,6 +36,18 @@
     margin: 0.5rem;
     opacity: 0.8;
     transition: opacity 0.2s ease;
+
+    @media screen and (min-width: $tablet-min) {
+      flex-basis: calc(50% - 1rem);
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+      flex-basis: calc(33% - 1rem);
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
 
     &:hover {
       opacity: 1;

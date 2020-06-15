@@ -54,8 +54,8 @@ add_action( 'wp_enqueue_scripts', 'mmm35_register_styles' );
 
 function mmm35_register_scripts() {
   $theme_version = wp_get_theme()->get( 'Version' );
-  wp_enqueue_script( 'mmm35-josh', 'https://cdn.jsdelivr.net/npm/joshjs@1.0.0/dist/josh.es5.min.js', array(), $theme_version, true );
-  wp_enqueue_script( 'mmm35-main', get_template_directory_uri() . '/main.js', array(), $theme_version, true );
+  wp_enqueue_script( 'mmm35-josh', 'https://cdn.jsdelivr.net/npm/joshjs@1.0.0/dist/josh.es5.min.js', array(), $theme_version, false );
+  wp_enqueue_script( 'mmm35-main', get_template_directory_uri() . '/main.js', array(), $theme_version, false );
 }
 add_action( 'wp_enqueue_scripts', 'mmm35_register_scripts' );
 
