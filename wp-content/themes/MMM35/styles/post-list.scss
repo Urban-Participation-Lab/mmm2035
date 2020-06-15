@@ -1,4 +1,11 @@
 .mmm35-post-list {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: calc(100vw - 4rem);
+  max-width: calc(1440px - 4rem);
+  margin-left: 50%;
+  transform: translateX(-50%);
+
   &__title {
     flex-basis: 100%;
     flex-shrink: 0;

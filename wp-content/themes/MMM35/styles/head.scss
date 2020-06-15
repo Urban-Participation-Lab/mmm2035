@@ -41,6 +41,10 @@
     height: 90px;
     padding-top: 0;
 
+    &:hover {
+      opacity: 1;
+    }
+
     img {
       height: 100%;
     }

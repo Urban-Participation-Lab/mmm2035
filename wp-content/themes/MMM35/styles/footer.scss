@@ -1,12 +1,15 @@
 .mmm35-footer {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 1rem;
+  flex-direction: column;
+  padding: 2rem;
   padding-top: 3rem;
   background: $background;
   font-size: 0.8rem;
+
+  @media screen and (min-width: $tablet-min) {
+    flex-direction: row;
+  }
 
   > * {
     margin: 1rem 0;
@@ -14,22 +17,40 @@
 
   &__nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style: none;
-    flex-wrap: wrap;
     padding: 0;
+    order: 1;
+
+    @media screen and (min-width: $tablet-min) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      order: 2;
+    }
 
     a {
       color: $foreground;
       text-decoration: none;
       background: transparent;
-      margin-left: 12px;
+      margin-left: 0;
       border: 0;
       outline: 0;
       font: inherit;
       text-transform: inherit;
       letter-spacing: inherit;
       cursor: pointer;
+
+      @media screen and (min-width: $tablet-min) {
+        margin-left: 12px;
+      }
     }
   }
+
+  &__credits {
+    order: 2;
+
+    @media screen and (min-width: $tablet-min) {
+      order: 1;
+    }
+}
 }
