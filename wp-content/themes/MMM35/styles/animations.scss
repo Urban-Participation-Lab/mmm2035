@@ -12,18 +12,3 @@
 .animate__fadeInUp {
   animation-name: fadeInUp;
 }
-
-@keyframes fadeInUpOpague {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 50px, 0);
-  }
-
-  to {
-    opacity: 0.8;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.animate__fadeInUpOpague {
-  animation-name: fadeInUpOpague;
-}
