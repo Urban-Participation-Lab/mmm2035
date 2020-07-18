@@ -14,7 +14,7 @@ if (empty($categories)) {
 }
 
 $category = $categories[0];
-$posts = get_posts(array( 'numberposts' => 10, 'category' => $category->cat_ID ) );
+$posts = get_posts(array( 'numberposts' => 3, 'category' => $category->cat_ID, 'exclude' => array(get_the_ID()) ) );
 ?>
 <div class="mmm35-post-list">
   <h2 class="mmm35-post-list__title">Weitere <?php echo $category->name ?></h2>
