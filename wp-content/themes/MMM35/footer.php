@@ -9,7 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
     <footer class="mmm35-footer">
-      <p class="mmm35-footer__credits">Created by Urban Participation Lab</p>
+      <p class="mmm35-footer__credits">
+        MOVE |
+        <a href="https://uplab.space" rel="noreferrer" target="_blank">Urban Participation Lab</a>
+      </p>
 
       <?php if ( has_nav_menu( 'footer' ) ) { ?>
         <?php wp_nav_menu(

@@ -49,6 +49,10 @@
   &__credits {
     order: 2;
 
+    a {
+      color: inherit;
+    }
+
     @media screen and (min-width: $tablet-min) {
       order: 1;
     }
