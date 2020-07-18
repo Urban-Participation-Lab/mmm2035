@@ -1,0 +1,48 @@
+.mmm35-search-form {
+  $size: 40px;
+  $border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+
+  &:hover &__input,
+  &__input:focus,
+  &__input:valid {
+    width: 4 * $size;
+  }
+
+  &__input {
+    border: 1px solid $grey-2;
+    border-right: 0;
+    width: 1.5 * $size;
+    transition: width 0.1s ease;
+    height: $size;
+    border-radius: $border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0 15px;
+
+    &:invalid {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  &__submit {
+    border: 1px solid $grey-2;
+    background-color: $grey-1;
+    width: $size;
+    height: $size;
+    padding: 0;
+    border-radius: $border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    margin-left: 20px;
+  }
+}

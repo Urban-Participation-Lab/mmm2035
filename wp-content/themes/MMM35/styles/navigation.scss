@@ -1,12 +1,7 @@
 .mmm35-nav {
-  background: $background;
-  list-style: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  background: $background;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -14,6 +9,18 @@
   bottom: 0;
   left: 0;
   right: 0;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
 
   &_footer #{&}__item-link {
     text-decoration: none;
@@ -47,12 +54,17 @@
 
   &__item-link {
     color: inherit;
+    text-align: center;
   }
 
   @media screen and (min-width: $tablet-min) {
     position: static;
     background: transparent;
     flex-direction: row;
+
+    &__list {
+      flex-direction: row;
+    }
 
     &__item {
       flex-basis: auto;
@@ -62,4 +74,8 @@
       font-size: inherit;
     }
   }
+}
+
+.admin-bar .mmm35-nav {
+  top: calc(46px + #{$head-height});
 }
