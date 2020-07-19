@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: auto;
   text-align: center;
   padding-top: 2rem;
@@ -63,6 +64,7 @@
     max-width: 100vw;
     height: $hero-height;
     position: fixed;
+    justify-content: center;
 
     .mmm35-hero__title {
       color: $background;
