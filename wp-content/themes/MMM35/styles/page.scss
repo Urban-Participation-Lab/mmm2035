@@ -8,18 +8,8 @@
   flex-grow: 1;
   z-index: 1;
 
-  > *:not(.mmm35-main):not(.mmm35-hero) {
-    margin: 0;
-    max-width: $max-page-width;
-  }
-
   @media screen and (min-width: $tablet-min) {
     padding-top: 1rem;
-
-    > *:not(.mmm35-main):not(.mmm35-hero) {
-      width: calc(100% - 2rem);
-      margin: 0 auto;
-    }
   }
 }
 

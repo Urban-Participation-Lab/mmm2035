@@ -3,6 +3,9 @@
   padding: 2rem;
   margin-top: 2rem;
   text-align: center;
+  width: calc(100vw - 4rem);
+  margin-left: 50%;
+  transform: translateX(-50%);
 
   @media screen and (min-width: $tablet-min) {
     padding: 3rem;
