@@ -1,38 +1,44 @@
 .mmm35-search-form {
-  $size: 3rem;
-  $border-radius: 4px;
+  $size: 2rem;
 
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > * {
+    border-radius: 0px;
+    margin-top: -1px;
+  }
 
   &__input {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
     border: 1px solid $accent;
-    border-right: 0;
-    width: 5 * $size;
+    min-width: 5 * $size;
+    flex-basis: 60%;
+    flex-shrink: 0;
+    flex-grow: 1;
     transition: width 0.1s ease;
     height: $size;
-    border-radius: $border-radius;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     padding: 0 15px;
-
-    &:invalid {
-      outline: 0;
-      box-shadow: none;
+    white-space: nowrap;
+    
+    input {
+      margin-right: 0.5rem;
     }
   }
 
   &__submit {
     border: 1px solid $accent;
     background-color: $accent;
-    width: $size;
+    flex-basis: $size;
     height: $size;
     padding: 0;
-    border-radius: $border-radius;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
     display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -49,5 +55,11 @@
 
   @media screen and (min-width: $tablet-min) {
     margin-left: 20px;
+    flex-wrap: nowrap;
+
+    > * {
+      margin-top: 0;
+      margin-left: -1px;
+    }
   }
 }

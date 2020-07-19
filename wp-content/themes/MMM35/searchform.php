@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <form
-  action="/"
+  action="./"
   method="get"
   class="mmm35-search-form"
 >
   <input
     class="mmm35-search-form__input"
+    placeholder="Suchen"
     name="s"
     value="<?php the_search_query(); ?>"
-    required
   />
   <button
     class="mmm35-search-form__submit"

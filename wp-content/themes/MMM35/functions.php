@@ -77,10 +77,22 @@ function mmm35_pre_get_posts( $query ) {
     return $query;
   }
   
-  if( isset($query->query_vars['category_name']) && $query->query_vars['category_name'] == 'veranstaltungen' ) {
-    $query->set('orderby', 'meta_value');  
-    $query->set('meta_key', 'end_date');   
-    $query->set('order', 'ASC'); 
+  if( isset( $query->query_vars['category_name']) && $query->query_vars['category_name'] == 'veranstaltungen' ) {
+    if ( !isset( $_GET['show_full_history'] ) ) {
+      $query-> set(
+        'meta_query',
+        array(
+          'key' => 'end_date',
+          'compare' => '>',
+          'value' => date('Ymd'),
+          'type' => 'numeric'
+        )
+      );
+    }
+
+    $query->set( 'orderby', 'meta_value' );  
+    $query->set( 'meta_key', 'end_date' );   
+    $query->set( 'order', 'ASC' ); 
   }
   // return
   return $query;

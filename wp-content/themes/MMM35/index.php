@@ -9,17 +9,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $wp_query;
+global $query_string;
 
 $queried_object = get_queried_object();
-
 $category_id = $queried_object->term_id;
+wp_parse_str( $query_string, $search_query );
+$search = new WP_Query( $search_query );
+$total_results = $wp_query->found_posts;
 
 get_header();
 ?>
 
 <div class="mmm35-page">
-  <header>
-    <h1 class="mmm35-hero__title"><?php echo $queried_object->name ?></h1>
+  <header class="mmm35-hero">
+    <h1 class="mmm35-hero__title">
+      <?php echo $queried_object->name ?>
+    </h1>
+    <?php get_search_form(); ?>
   </header>
   
   <main class="mmm35-main">
@@ -58,7 +64,7 @@ get_header();
           </div>
         </a>
       <?php endwhile; else : ?>
-        <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <p>Keine <?php echo $queried_object->name ?> gefunden</p>
       <?php endif; ?>
       </div>
       <div class="mmm35-post-list__pagination">
