@@ -16,7 +16,7 @@
     align-items: center;
     font-size: 1rem;
     border: 1px solid $accent;
-    min-width: 5 * $size;
+    min-width: 3 * $size;
     flex-basis: 60%;
     flex-shrink: 0;
     flex-grow: 1;
@@ -56,6 +56,10 @@
   @media screen and (min-width: $tablet-min) {
     margin-left: 20px;
     flex-wrap: nowrap;
+
+    &__input {
+      flex-shrink: 1;
+    }
 
     > * {
       margin-top: 0;
