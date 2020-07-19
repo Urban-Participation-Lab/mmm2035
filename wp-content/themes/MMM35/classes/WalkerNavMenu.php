@@ -33,7 +33,7 @@ class MMM35WalkerNavMenu extends Walker_Nav_Menu {
       $item->current ? ' ' . $this->baseClass . '__item_current' : '',
       $is_image_link ? ' ' . $this->baseClass . '__item_image' : '',
       $item->url,
-      $item->object === 'custom' ? 'target="_blank" rel="noreferrer noopener"': '',
+      $item->object === 'custom' && strpos( $item->url, 'http' ) === 0 ? 'target="_blank" rel="noreferrer noopener"': '',
       $title
     );
   }
