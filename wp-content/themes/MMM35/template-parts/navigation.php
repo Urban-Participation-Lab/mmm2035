@@ -44,4 +44,16 @@ if ( ! defined( 'ABSPATH' ) ) {
       );
     ?>
   <?php } ?>
+
+  <a
+    rel="norefferer noopener"
+    href="https://www.muenster.de/"
+    class="mmm35-head__logo-city"
+    target="_blank"
+  >
+    <img
+      src="<?php echo get_template_directory_uri(); ?>/assets/partners/muenster.png"
+      alt="Logo Der Stadt Münster"
+    />
+  </a> 
 </nav>

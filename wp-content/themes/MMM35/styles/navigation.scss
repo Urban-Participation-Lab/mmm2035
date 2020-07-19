@@ -47,6 +47,7 @@
 
   &__item-link {
     color: inherit;
+    text-align: center;
   }
 
   @media screen and (min-width: $tablet-min) {
@@ -62,8 +63,4 @@
       font-size: inherit;
     }
   }
-}
-
-.admin-bar .mmm35-nav {
-  top: calc(46px + #{$head-height});
 }
