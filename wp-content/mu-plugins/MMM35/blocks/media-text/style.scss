@@ -40,15 +40,6 @@
     }
   }
 
-  &.has-media-on-the-right {
-    & > .wp-block-mmm35-media-text__media {
-      order: 1;
-    }
-    & > .block-editor-inner-blocks {
-      order: 2;
-    }
-  }
-
   & > .block-editor-inner-blocks {
     word-break: break-word;
     grid-column: 2;
@@ -59,6 +50,15 @@
 
   @media (min-width: $tablet-min) {
     flex-direction: row;
+
+    &.has-media-on-the-right {
+      & > .wp-block-mmm35-media-text__media {
+        order: 1;
+      }
+      & > .block-editor-inner-blocks {
+        order: 2;
+      }
+    }
 
     &__content {
       padding: 3rem;

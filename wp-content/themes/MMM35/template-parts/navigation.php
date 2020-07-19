@@ -31,20 +31,17 @@ if ( ! defined( 'ABSPATH' ) ) {
       });
     });
   </script>
-  <div class="mmm35-nav">
-    <?php if ( has_nav_menu( 'primary' ) ) { ?>
-      <?php
-        wp_nav_menu(
-          array(
-            'container'  => '',
-            'items_wrap' => '<ul class="mmm35-nav__list">%3$s</ul>',
-            'theme_location' => 'primary',
-            'depth' => 1,
-            'walker' => new MMM35WalkerNavMenu(),
-          )
-        );
-      ?>
-    <?php } ?>
-    <?php get_search_form(); ?>
-  </div>
+  <?php if ( has_nav_menu( 'primary' ) ) { ?>
+    <?php
+      wp_nav_menu(
+        array(
+          'container'  => '',
+          'items_wrap' => '<ul class="mmm35-nav">%3$s</ul>',
+          'theme_location' => 'primary',
+          'depth' => 1,
+          'walker' => new MMM35WalkerNavMenu(),
+        )
+      );
+    ?>
+  <?php } ?>
 </nav>

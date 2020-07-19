@@ -1,20 +1,15 @@
 .mmm35-search-form {
-  $size: 40px;
+  $size: 3rem;
   $border-radius: 4px;
 
   display: flex;
   align-items: center;
 
-  &:hover &__input,
-  &__input:focus,
-  &__input:valid {
-    width: 4 * $size;
-  }
-
   &__input {
-    border: 1px solid $grey-2;
+    font-size: 1.5rem;
+    border: 1px solid $accent;
     border-right: 0;
-    width: 1.5 * $size;
+    width: 5 * $size;
     transition: width 0.1s ease;
     height: $size;
     border-radius: $border-radius;
@@ -29,8 +24,8 @@
   }
 
   &__submit {
-    border: 1px solid $grey-2;
-    background-color: $grey-1;
+    border: 1px solid $accent;
+    background-color: $accent;
     width: $size;
     height: $size;
     padding: 0;
@@ -40,6 +35,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+
+    svg {
+      color: $background;
+    }
+
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
   }
 
   @media screen and (min-width: $tablet-min) {

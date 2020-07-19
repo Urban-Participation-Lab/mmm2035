@@ -22,12 +22,7 @@ get_header();
 <div class="mmm35-page">
   <header class="mmm35-hero">
     <h1 class="mmm35-hero__title">
-      <img
-        class="mmm35-hero__title-icon"
-        src="<?php echo get_template_directory_uri(); ?>/assets/icons/search.svg"
-        alt="Suche"
-      />
-      <?php echo $search_query['s'] ?>
+      <?php get_search_form(); ?>
     </h1>
   </header>
   

@@ -6,9 +6,22 @@
   margin-left: 50%;
   transform: translateX(-50%);
 
+  &_category-item-list {
+    margin-top: 5rem;
+
+    &::before {
+      display: block;
+      content: '';
+      width: 50%;
+      margin: 0 auto;
+      border-top: 1px solid $grey-2;
+    }
+  }
+
   &__title {
     flex-basis: 100%;
     flex-shrink: 0;
+    text-align: center;
   }
 
   &__items {
@@ -94,5 +107,10 @@
         margin-top: 0;
       }
     }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -25,9 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     type="submit"
     aria-label="Suchen"
   >
-    <img
-      src="<?php echo get_template_directory_uri(); ?>/assets/icons/search.svg"
-      alt="Suche"
-    />
+    <?php require_once( get_template_directory() . '/assets/icons/search.svg' ); ?>
   </button>
 </form>

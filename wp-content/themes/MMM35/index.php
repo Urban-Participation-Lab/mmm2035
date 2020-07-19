@@ -7,12 +7,20 @@
 if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
 }
-get_header();
 
+global $wp_query;
+
+$queried_object = get_queried_object();
+
+$category_id = $queried_object->term_id;
+
+get_header();
 ?>
 
 <div class="mmm35-page">
-  <header></header>
+  <header>
+    <h1 class="mmm35-hero__title"><?php echo $queried_object->name ?></h1>
+  </header>
   
   <main class="mmm35-main">
     <div class="mmm35-post-list">
@@ -37,7 +45,7 @@ get_header();
           >
             <?php
               $types = get_post_meta( $post->ID, 'type' );
-              $dates = get_post_meta( $post->ID, 'date' );
+              $dates = get_post_meta( $post->ID, 'date_description' );
               $meta = array();
               if (!empty($types)) { array_push( $meta, implode( $types, ', ' ) ); }
               if (!empty($dates)) { array_push( $meta, implode( $dates, ', ' ) ); }
@@ -52,6 +60,9 @@ get_header();
       <?php endwhile; else : ?>
         <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
       <?php endif; ?>
+      </div>
+      <div class="mmm35-post-list__pagination">
+        <?php posts_nav_link(); ?>
       </div>
     </div>
   </main>

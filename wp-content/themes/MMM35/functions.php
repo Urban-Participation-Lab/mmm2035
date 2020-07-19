@@ -70,3 +70,20 @@ function mmm35_menus() {
 }
 
 add_action( 'init', 'mmm35_menus' );
+
+function mmm35_pre_get_posts( $query ) {
+  // do not modify queries in the admin
+  if( is_admin() ) {
+    return $query;
+  }
+  
+  if( isset($query->query_vars['category_name']) && $query->query_vars['category_name'] == 'veranstaltungen' ) {
+    $query->set('orderby', 'meta_value');  
+    $query->set('meta_key', 'end_date');   
+    $query->set('order', 'ASC'); 
+  }
+  // return
+  return $query;
+}
+
+add_action('pre_get_posts', 'mmm35_pre_get_posts');

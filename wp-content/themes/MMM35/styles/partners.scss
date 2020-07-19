@@ -2,15 +2,17 @@
   background-color: $grey-1;
   padding: 2rem;
   margin-top: 2rem;
+  text-align: center;
 
   @media screen and (min-width: $tablet-min) {
     padding: 3rem;
+    text-align: left;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     
     img {
       height: 2rem;

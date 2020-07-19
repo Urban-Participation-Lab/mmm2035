@@ -6,6 +6,7 @@
   padding-top: 3rem;
   background: $background;
   font-size: 0.8rem;
+  z-index: 1;
 
   @media screen and (min-width: $tablet-min) {
     flex-direction: row;
