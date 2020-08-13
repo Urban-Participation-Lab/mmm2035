@@ -23,12 +23,10 @@ if ($ctas->found_posts === "0") {
       continue;
     }
   ?>
-    <div class="wp-block-mmm35-button wp-block-mmm35-button_cta">
-      <a
-        class="wp-block-mmm35-button__link"
-        href="<?php echo get_permalink( $post ); ?>"
-        title="<?php echo $post->post_title; ?>"
-      ><?php echo $meta[0]; ?></a>
-    </div>
-  <? } ?>
+    <a
+      class="mmm35-ctas__cta"
+      href="<?php echo get_permalink( $post ); ?>"
+      title="<?php echo $post->post_title; ?>"
+    ><?php echo $meta[0]; ?></a>
+<? } ?>
 </div>
