@@ -50,7 +50,7 @@
     text-align: center;
   }
 
-  @media screen and (min-width: $tablet-min) {
+  @media screen and (min-width: $desktop-min) {
     position: static;
     background: transparent;
     flex-direction: row;
