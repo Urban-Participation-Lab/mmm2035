@@ -48,7 +48,7 @@ $posts = get_posts(array( 'numberposts' => 3, 'category' => $category->cat_ID, '
           <div class="mmm35-post-list__item-meta"><?php echo implode($meta, ', '); ?></div>
         <?php endif; ?>
         <h2 class="mmm35-post-list__item-title"><?php echo get_the_title( $post ); ?></h2>
-        <p><?php echo wp_trim_words( wp_strip_all_tags( get_the_content( $post->ID ) ), 15, '...' ); ?></p>
+        <p><?php echo wp_trim_words( wp_strip_all_tags( get_the_content( null, false, $post->ID ) ), 15, '...' ); ?></p>
       </div>
     </a>
   <?php endforeach; ?>

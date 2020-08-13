@@ -28,7 +28,7 @@ $queried_object = get_queried_object();
         <?php echo isset( $_GET['show_full_history'] ) ? 'checked' : ''; ?>
         onchange="document.getElementById('searchform').submit()"
       />
-      Vergangene Anzeigen
+      Vergangene anzeigen
     </label>
   <?php endif; ?>
   <input
