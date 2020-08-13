@@ -53,8 +53,8 @@ get_header();
               $types = get_post_meta( $post->ID, 'type' );
               $dates = get_post_meta( $post->ID, 'date_description' );
               $meta = array();
-              if (!empty($types)) { array_push( $meta, implode( $types, ', ' ) ); }
-              if (!empty($dates)) { array_push( $meta, implode( $dates, ', ' ) ); }
+              if (!empty($types) && $types !== '') { array_push( $meta, implode( $types, ', ' ) ); }
+              if (!empty($dates) && $dates !== '') { array_push( $meta, implode( $dates, ', ' ) ); }
               if (!empty($meta)) :
             ?>
               <div class="mmm35-post-list__item-meta"><?php echo implode($meta, ', '); ?></div>
