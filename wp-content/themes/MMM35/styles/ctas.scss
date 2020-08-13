@@ -8,7 +8,7 @@
     border-radius: 22px;
     font-size: 1.5rem;
     height: 60px;
-    padding: 8px 32px;
+    padding: 8px 40px;
     font-weight: normal;
     border-radius: 32px;
     // Windows' High Contrast mode will show this outline, but not the box-shadow.
@@ -20,10 +20,10 @@
 
     transition-timing-function: ease;
     transition-duration: 0.1s;
-    transition-property: transform;
+    transition-property: background-color;
 
     &:hover {
-      transform: scale(1.05);
+      background-color: darken($accent, 5%);
     }
   }
 }
