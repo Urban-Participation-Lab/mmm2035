@@ -7,6 +7,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
 }
+
 get_header();
 
 $has_featured_images = false;
@@ -28,6 +29,7 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
         entdecken<span class="mmm35-hero__title-dot mmm35-hero__title-dot_green">.</span>
         erfahren<span class="mmm35-hero__title-dot mmm35-hero__title-dot_lightblue">.</span>
         erleben<span class="mmm35-hero__title-dot mmm35-hero__title-dot_darkblue">.</span>
+        <?php get_template_part( 'template-parts/ctas' ); ?>
       </h1>
     <?php else : ?>
       <h1 class="mmm35-hero__title"><?php the_title(); ?></h1>

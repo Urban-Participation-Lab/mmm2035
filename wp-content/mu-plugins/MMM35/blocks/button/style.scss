@@ -1,6 +1,7 @@
 @import '../../../../../variables.scss';
 
 .wp-block-mmm35-button {
+  text-shadow: none;
   background-color: transparent;
   color: $foreground;
   border: 1px solid $foreground;
@@ -17,6 +18,15 @@
   transition-timing-function: ease;
   transition-duration: 0.1s;
   transition-property: background, color, border;
+
+  &_cta {
+    background-color: $background;
+    font-size: 1.5rem;
+    height: 60px;
+    padding: 8px 32px;
+    font-weight: normal;
+    border-radius: 32px;
+  }
 
   &__link {
     color: inherit;

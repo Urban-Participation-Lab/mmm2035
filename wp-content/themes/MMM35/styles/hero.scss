@@ -15,16 +15,20 @@
   padding-top: 2rem;
 
   @media screen and (min-width: $desktop-min) {
-    justify-content: space-between;
     flex-direction: row;
   }
 
   &__title {
-    font-size: 3.5rem;
-    line-height: 5rem;
+    font-size: 2.5rem;
+    line-height: 4rem;
     margin: 0;
     padding: 0 2rem;
     text-align: center;
+
+    @media screen and (min-width: $tablet-min) {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
 
     &-dot {
       &_green { color: $ci-green; }
@@ -69,7 +73,7 @@
 
     .mmm35-hero__title {
       color: $background;
-      text-shadow: 0px 0px 5px darken($grey-2, 20%);
+      text-shadow: 0px 0px 5px opacify($grey-2, 0.5);
       z-index: 1;
     }
   }
@@ -77,5 +81,6 @@
   @at-root .home &_has-image {
     height: $hero-height-home;
   }
+
 }
 
