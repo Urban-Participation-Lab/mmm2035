@@ -70,7 +70,9 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
     <main class="mmm35-main mmm35-post">
       <?php the_content(); ?>
     </main>
-    <?php get_template_part( 'template-parts/category-post-list' ) ?>
+    <?php if ( is_single() ) : ?>
+      <?php get_template_part( 'template-parts/category-post-list' ) ?>
+    <?php endif; ?>
 
     <?php if ( is_front_page() ) : ?>
       <?php get_template_part( 'template-parts/partners' ) ?>
