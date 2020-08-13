@@ -2,16 +2,26 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-top: 2rem;
 
   figure {
     text-align: center;
   }
 
+  p,
+  h1
+  h2,
+  h3,
+  figure,
+  blockquote,
+  ul,
+  ol {
+    max-width: 800px;
+  }
+
   > .wp-block-mmm35-media-text {
     width: calc(100vw - 4rem);
-    margin-left: 50%;
-    transform: translateX(-50%);
     min-height: 40vh;
   }
 }

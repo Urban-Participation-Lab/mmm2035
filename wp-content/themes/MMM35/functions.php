@@ -78,17 +78,16 @@ function mmm35_pre_get_posts( $query ) {
   }
   
   if( isset( $query->query_vars['category_name']) && $query->query_vars['category_name'] == 'veranstaltungen' ) {
-    if ( !isset( $_GET['show_full_history'] ) ) {
-      $query-> set(
-        'meta_query',
-        array(
-          'key' => 'end_date',
-          'compare' => '>',
-          'value' => date('Ymd'),
-          'type' => 'numeric'
-        )
-      );
-    }
+    $show_past = isset( $_GET['show_past_events'] ); 
+    $query-> set(
+      'meta_query',
+      array(
+        'key' => 'end_date',
+        'compare' => $show_past ? '<' : '>',
+        'value' => date('Ymd'),
+        'type' => 'numeric'
+      )
+    );
 
     $query->set( 'orderby', 'meta_value' );  
     $query->set( 'meta_key', 'end_date' );   

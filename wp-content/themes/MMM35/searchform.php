@@ -24,8 +24,8 @@ $queried_object = get_queried_object();
     >
       <input
         type="checkbox"
-        name="show_full_history"
-        <?php echo isset( $_GET['show_full_history'] ) ? 'checked' : ''; ?>
+        name="show_past_events"
+        <?php echo isset( $_GET['show_past_events'] ) ? 'checked' : ''; ?>
         onchange="document.getElementById('searchform').submit()"
       />
       Vergangene anzeigen
