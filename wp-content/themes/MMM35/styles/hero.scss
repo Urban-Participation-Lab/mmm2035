@@ -31,6 +31,8 @@
     }
 
     &-dot {
+      line-height: inherit;
+
       &_green { color: $ci-green; }
       &_lightblue { color: $ci-lightblue; }
       &_darkblue { color: $ci-darkblue; }
