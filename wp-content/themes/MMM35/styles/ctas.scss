@@ -1,14 +1,16 @@
 .mmm35-ctas {
+  margin-top: 2rem;
+
   &__cta {
     text-shadow: none;
     background-color: $accent;
     border: 1px solid $accent;
     color: $background;
     text-decoration: none;
-    border-radius: 22px;
+    border-radius: 1.5rem;
     font-size: 1.5rem;
-    height: 60px;
-    padding: 8px 40px;
+    line-height: 2rem;
+    padding: 0.5rem 2rem;
     font-weight: normal;
     border-radius: 32px;
     // Windows' High Contrast mode will show this outline, but not the box-shadow.

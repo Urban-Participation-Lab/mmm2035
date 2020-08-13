@@ -63,7 +63,6 @@
   }
 
   @media screen and (min-width: $tablet-min) {
-    margin-left: auto;
     flex-wrap: nowrap;
 
     &__input {
@@ -74,5 +73,9 @@
       margin-top: 0;
       margin-left: -1px;
     }
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    margin-left: auto;
   }
 }

@@ -6,8 +6,9 @@
   color: $foreground;
   border: 1px solid $foreground;
   border-radius: 22px;
-  height: 44px;
-  padding: 4px 22px;
+  min-height: 44px;
+  line-height: 44px;
+  padding: 0 22px;
   // Windows' High Contrast mode will show this outline, but not the box-shadow.
   outline: 2px solid transparent;
   outline-offset: -2px;
