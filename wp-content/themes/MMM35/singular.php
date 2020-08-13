@@ -34,13 +34,7 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
     <?php else : ?>
       <h1 class="mmm35-hero__title"><?php the_title(); ?></h1>
     <?php endif; ?>
-    <?php if ( has_post_thumbnail() ) : ?>
-      <figure class="mmm35-hero__figure mmm35-figure">
-        <?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'mmm35-hero__image' ] ); ?>
-        <figcaption class="mmm35-figure__caption"><?php the_post_thumbnail_caption(); ?></figcaption>
-      </figure> 
-    <?php
-      elseif ( $has_featured_images ) :
+    <?php if ( $has_featured_images ) :
         foreach ($featured_image_ids as $id) :
           $caption = $smfi_api->get_image_caption_by_id( $id );
     ?>
@@ -64,6 +58,11 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
         }
         setInterval(nextImage, 5000);
       </script>
+    <?php elseif ( has_post_thumbnail() ) : ?>
+      <figure class="mmm35-hero__figure mmm35-figure">
+        <?php the_post_thumbnail( 'post-thumbnail', [ 'class' => 'mmm35-hero__image' ] ); ?>
+        <figcaption class="mmm35-figure__caption"><?php the_post_thumbnail_caption(); ?></figcaption>
+      </figure> 
     <?php endif; ?>
   </header>
   <div class="mmm35-page">

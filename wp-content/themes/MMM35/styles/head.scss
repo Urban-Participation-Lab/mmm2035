@@ -41,6 +41,7 @@
     color: $accent;
     height: 90px;
     padding-top: 0;
+    margin-top: -3px;
 
     &:hover {
       opacity: 1;
@@ -53,11 +54,20 @@
     @media screen and (min-width: $tablet-min) {
       height: 120px;
     }
+
+    @media screen and (min-width: $desktop-min) {
+      margin-top: -10px;
+    }
   }
 
   &__logo-city {
     > img {
       height: 100%;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+      padding-top: 0.2rem;
+      padding-bottom: 0.8rem;
     }
   }
 
@@ -74,9 +84,18 @@
 
   &__mobile-nav-toggle {
     margin: 0 auto;
+    padding-top: 15px;
+
+    @media screen and (min-width: $tablet-min) {
+      padding-top: 20px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+      padding-top: 15px;
+    }
   }
 
-  @media screen and (min-width: $tablet-min) {
+  @media screen and (min-width: $desktop-min) {
     &__mobile-nav-toggle {
       display: none;
     }
