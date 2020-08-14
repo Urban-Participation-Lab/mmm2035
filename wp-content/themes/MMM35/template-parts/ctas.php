@@ -19,7 +19,7 @@ if ($ctas->found_posts === "0") {
   <?php
   foreach ( $ctas->posts as $post ) {
     $meta = get_post_meta( $post->ID, 'cta' );
-    if ( count( $meta ) === 0 ) {
+    if ( count( $meta ) === 0 || $meta[0] === '' ) {
       continue;
     }
   ?>
