@@ -105,7 +105,7 @@ steps:
         - ./wp-content/mu-plugins/*/blocks/*/dist.js
         - ./wp-content/mu-plugins/*/blocks/*/*.css
         - ./wp-content/mu-plugins/*/blocks/*/dist.asset.php
-      target: /home/webpxck7g/html/mmm35.b12f.io/wp-content/mu-plugins/
+      target: /home/webfz75tr/html/mobilitaet-in-muenster.de/wp-content/mu-plugins/
 
   - name: "Deploy Theme Prod"
     when: 
@@ -134,4 +134,4 @@ steps:
         - ./wp-content/themes/MMM35/template-parts/*
         - ./wp-content/themes/MMM35/classes/*
         - ./wp-content/themes/MMM35/assets/*
-      target: /home/webpxck7g/html/mmm35.b12f.io/wp-content/themes/MMM35/
+      target: /home/webfz75tr/html/mobilitaet-in-muenster.de/wp-content/themes/MMM35/
