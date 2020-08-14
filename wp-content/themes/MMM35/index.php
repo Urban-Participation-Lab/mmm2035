@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function has_content($str) {
-  var_dump($str);
   return $str != '';
 }
 
