@@ -3,8 +3,8 @@
 
   &__cta {
     text-shadow: none;
-    background-color: $accent;
-    border: 1px solid $accent;
+    background-color: $ci-green;
+    border: 1px solid $ci-green;
     color: $background;
     text-decoration: none;
     border-radius: 1.5rem;
@@ -25,7 +25,7 @@
     transition-property: background-color;
 
     &:hover {
-      background-color: darken($accent, 5%);
+      background-color: darken($ci-green, 5%);
     }
   }
 }

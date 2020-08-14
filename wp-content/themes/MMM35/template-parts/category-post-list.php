@@ -8,6 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
 }
 
+function has_content($str) {
+  var_dump($str);
+  return $str != '';
+}
+
 $categories = get_the_category();
 if (empty($categories)) {
   return;
@@ -38,12 +43,13 @@ $posts = get_posts(array( 'numberposts' => 3, 'category' => $category->cat_ID, '
         data-josh-anim-delay="400ms"
       >
         <?php
-          $types = get_post_meta( $post->ID, 'type' );
-          $dates = get_post_meta( $post->ID, 'date' );
+          // TODO: Dedupe this whole section with index.php at some point
+          $types = array_filter( get_post_meta( $post->ID, 'type' ), 'has_content' );
+          $dates = array_filter( get_post_meta( $post->ID, 'date_description' ), 'has_content' );
           $meta = array();
-          if (!empty($types) && $types !== '') { array_push( $meta, implode( $types, ', ' ) ); }
-          if (!empty($dates) && $dates !== '') { array_push( $meta, implode( $dates, ', ' ) ); }
-          if (!empty($meta)) :
+          if ( !empty($types) ) { array_push( $meta, implode( $types, ', ' ) ); }
+          if ( !empty($dates) ) { array_push( $meta, implode( $dates, ', ' ) ); }
+          if ( !empty($meta) ) :
         ?>
           <div class="mmm35-post-list__item-meta"><?php echo implode($meta, ', '); ?></div>
         <?php endif; ?>

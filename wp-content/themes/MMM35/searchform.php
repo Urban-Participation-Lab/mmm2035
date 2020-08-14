@@ -28,7 +28,7 @@ $queried_object = get_queried_object();
         <?php echo isset( $_GET['show_past_events'] ) ? 'checked' : ''; ?>
         onchange="document.getElementById('searchform').submit()"
       />
-      Archivierte
+      Archiv
     </label>
   <?php endif; ?>
   <input
