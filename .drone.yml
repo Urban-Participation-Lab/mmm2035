@@ -4,6 +4,7 @@ workspace:
 kind: pipeline
 type: docker
 name: default
+
 steps:
   - name: "Build theme"
     image: node:12
@@ -23,6 +24,9 @@ steps:
     when: 
       branch:
         - master
+    depends_on:
+      - "Build theme"
+      - "Build plugin"
     image: appleboy/drone-scp
     settings:
       host: webpxck7g.wh.hosting.zone
@@ -46,6 +50,9 @@ steps:
     when: 
       branch:
         - master
+    depends_on:
+      - "Build theme"
+      - "Build plugin"
     image: appleboy/drone-scp
     settings:
       host: webpxck7g.wh.hosting.zone
@@ -72,6 +79,9 @@ steps:
         - promote
       target:
         - production
+    depends_on:
+      - "Build theme"
+      - "Build plugin"
     image: appleboy/drone-scp
     settings:
       host: webfz75tr.wh.hosting.zone
@@ -97,6 +107,9 @@ steps:
         - promote
       target:
         - production
+    depends_on:
+      - "Build theme"
+      - "Build plugin"
     image: appleboy/drone-scp
     settings:
       host: webfz75tr.wh.hosting.zone
