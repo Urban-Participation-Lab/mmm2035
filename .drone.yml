@@ -32,6 +32,7 @@ steps:
         from_secret: dev_ssh_user
       key:
         from_secret: dev_ssh_key
+      strip_components: 2
       source:
         - ./wp-content/mu-plugins/MMM35.php
         - ./wp-content/mu-plugins/MMM35/MMM35.php
@@ -54,6 +55,7 @@ steps:
         from_secret: dev_ssh_user
       key:
         from_secret: dev_ssh_key
+      strip_components: 2
       source:
         - ./wp-content/themes/MMM35/*.php
         - ./wp-content/themes/MMM35/*.css
@@ -79,6 +81,7 @@ steps:
         from_secret: prod_ssh_user
       key:
         from_secret: prod_ssh_key
+      strip_components: 2
       source:
         - ./wp-content/mu-plugins/MMM35.php
         - ./wp-content/mu-plugins/MMM35/MMM35.php
@@ -103,6 +106,7 @@ steps:
         from_secret: prod_ssh_user
       key:
         from_secret: prod_ssh_key
+      strip_components: 2
       source:
         - ./wp-content/themes/MMM35/*.php
         - ./wp-content/themes/MMM35/*.css
