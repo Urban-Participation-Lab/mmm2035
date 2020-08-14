@@ -38,12 +38,12 @@ steps:
         from_secret: dev_ssh_key
       strip_components: 2
       source:
-        - ./wp-content/mu-plugins/MMM35.php
-        - ./wp-content/mu-plugins/MMM35/MMM35.php
-        - ./wp-content/mu-plugins/MMM35/blocks/*.php
-        - ./wp-content/mu-plugins/MMM35/blocks/*/dist.js
-        - ./wp-content/mu-plugins/MMM35/blocks/*/*.css
-        - ./wp-content/mu-plugins/MMM35/blocks/*/dist.asset.php
+        - ./wp-content/mu-plugins/*.php
+        - ./wp-content/mu-plugins/*/*.php
+        - ./wp-content/mu-plugins/*/blocks/*.php
+        - ./wp-content/mu-plugins/*/blocks/*/dist.js
+        - ./wp-content/mu-plugins/*/blocks/*/*.css
+        - ./wp-content/mu-plugins/*/blocks/*/dist.asset.php
       target: /home/webpxck7g/html/mmm35.b12f.io/wp-content/mu-plugins/
 
   - name: "Deploy Theme Stage"
