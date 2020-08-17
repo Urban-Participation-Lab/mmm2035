@@ -1,11 +1,11 @@
 .mmm35-post-list {
-  margin-left: 2rem;
-  margin-right: 2rem;
   width: calc(100vw - 4rem);
   max-width: calc(1440px - 4rem);
 
   &_category-item-list {
     margin-top: 5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
 
     &::before {
       display: block;
@@ -26,7 +26,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 0.5rem;
     margin-left: -1rem;
     margin-right: -1rem;
@@ -97,7 +98,7 @@
     }
 
     &-title {
-      color: $accent;
+      color: $ci-lightblue;
       margin-top: 0;
       font-weight: 500;
 

@@ -25,7 +25,7 @@ get_header();
 ?>
 
 <div class="mmm35-page">
-  <header class="mmm35-hero">
+  <header class="mmm35-hero mmm35-hero_overview">
     <h1 class="mmm35-hero__title">
       <?php echo $queried_object->name ?>
     </h1>
@@ -64,7 +64,7 @@ get_header();
               <div class="mmm35-post-list__item-meta"><?php echo implode($meta, ', '); ?></div>
             <?php endif; ?>
             <h2 class="mmm35-post-list__item-title"><?php the_title(); ?></h2>
-            <p><?php echo wp_trim_words( wp_strip_all_tags( get_the_content() ), 15, '...' ); ?></p>
+            <p><?php echo wp_trim_words( wp_strip_all_tags( get_the_content() ), 25, '...' ); ?></p>
           </div>
         </a>
       <?php endwhile; else : ?>

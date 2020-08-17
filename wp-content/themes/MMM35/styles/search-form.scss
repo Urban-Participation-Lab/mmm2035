@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     font-size: 1rem;
-    border: 1px solid $accent;
+    border: 1px solid $ci-lightblue;
     min-width: 3 * $size;
     flex-basis: 60%;
     flex-shrink: 1;
@@ -34,6 +34,7 @@
     height: $size;
     padding: 0 15px;
     white-space: nowrap;
+    font-family: inherit;
     
     input {
       margin-right: 0.5rem;
@@ -41,8 +42,8 @@
   }
 
   &__submit {
-    border: 1px solid $accent;
-    background-color: $accent;
+    border: 1px solid $ci-lightblue;
+    background-color: $ci-lightblue;
     flex-basis: $size;
     height: $size;
     padding: 0 0.25 * $size;
@@ -59,7 +60,7 @@
     }
 
     &:hover {
-      background-color: darken($accent, 10%);
+      background-color: darken($ci-lightblue, 10%);
     }
   }
 
