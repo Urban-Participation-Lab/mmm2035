@@ -21,13 +21,14 @@
     font-size: 2.5rem;
     line-height: 3rem;
     margin: 0;
-    padding: 2rem;
+    padding: 0 2rem;
     text-align: center;
 
     &_frontpage {
       font-size: 2rem;
       line-height: 2rem;
       background-color: rgba($ci-darkblue, 0.4);
+      padding: 1rem 2rem;
       border-radius: 2rem;
     }
 
