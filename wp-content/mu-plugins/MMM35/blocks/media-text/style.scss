@@ -32,7 +32,10 @@
     align-self: center;
 
     > *:first-child {
-      margin-top: 0;
+      // These are to make sure we can link to the titles without 
+      // ending up way too low on the page
+      margin-top: -100px;
+      padding-top: 100px;
     }
 
     > *:last-child {
