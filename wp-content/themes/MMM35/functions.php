@@ -98,3 +98,9 @@ function mmm35_pre_get_posts( $query ) {
 }
 
 add_action('pre_get_posts', 'mmm35_pre_get_posts');
+
+function mmm35_trim_with_trailing_stuff( $content, $words ) {
+  $stripped = wp_strip_all_tags( $content );
+  $shortened = rtrim( wp_trim_words( $stripped, $words, '' ), '.,' );
+  return $shortened . '&hellip;';
+}
