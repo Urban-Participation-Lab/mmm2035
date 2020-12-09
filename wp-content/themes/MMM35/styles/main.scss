@@ -5,19 +5,29 @@
   align-items: center;
   padding-top: 2rem;
 
+  &_has-description {
+    padding-top: 0;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+
   figure {
     text-align: center;
   }
 
-  p,
-  h1
-  h2,
-  h3,
-  figure,
-  blockquote,
-  ul,
-  ol {
-    max-width: 800px;
+  @media screen and (min-width: $tablet-min) {
+    p,
+    h1
+    h2,
+    h3,
+    figure,
+    blockquote,
+    ul,
+    ol {
+      max-width: 800px;
+    }
   }
 
   > .wp-block-mmm35-media-text {

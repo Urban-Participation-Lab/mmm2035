@@ -24,30 +24,9 @@
     padding: 0 2rem;
     text-align: center;
 
-    &_frontpage {
-      font-size: 2rem;
-      line-height: 3rem;
-      background-color: rgba($ci-darkblue, 0.4);
-      padding: 1rem;
-      border-radius: 2rem;
-    }
-
     @media screen and (min-width: $tablet-min) {
       font-size: 3.5rem;
       line-height: 4rem;
-
-      &_frontpage {
-        font-size: 3rem;
-        line-height: 3rem;
-      }
-    }
-
-    &-dot {
-      line-height: inherit;
-
-      &_green { color: $ci-green; }
-      &_lightblue { color: $ci-lightblue; }
-      &_darkblue { color: $ci-darkblue; }
     }
 
     &-icon {

@@ -23,13 +23,6 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <header class="mmm35-hero <?php if ( has_post_thumbnail() || $has_featured_images ) { echo 'mmm35-hero_has-image'; } ?>">
     <?php if ( is_front_page() ) : ?>
-      <h1 class="mmm35-hero__title mmm35-hero__title_frontpage">
-        Münsters
-        mobile Vielfalt<br />
-        entdecken<span class="mmm35-hero__title-dot mmm35-hero__title-dot_green">.</span>
-        erfahren<span class="mmm35-hero__title-dot mmm35-hero__title-dot_lightblue">.</span>
-        erleben<span class="mmm35-hero__title-dot mmm35-hero__title-dot_darkblue">.</span>
-      </h1>
       <?php get_template_part( 'template-parts/ctas' ); ?>
     <?php else : ?>
       <h1 class="mmm35-hero__title"><?php the_title(); ?></h1>
@@ -71,10 +64,6 @@ if ( class_exists( 'Simple_Multiple_Featured_Images' ) && isset( $simple_multipl
     </main>
     <?php if ( is_single() ) : ?>
       <?php get_template_part( 'template-parts/category-post-list' ) ?>
-    <?php endif; ?>
-
-    <?php if ( is_front_page() ) : ?>
-      <?php get_template_part( 'template-parts/partners' ) ?>
     <?php endif; ?>
   </div>
 <?php endwhile; endif; ?>

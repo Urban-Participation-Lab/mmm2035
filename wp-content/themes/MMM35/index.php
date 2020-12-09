@@ -32,7 +32,10 @@ get_header();
     <?php get_search_form(); ?>
   </header>
   
-  <main class="mmm35-main">
+    <main class="mmm35-main <?php echo $queried_object->description ? 'mmm35-main_has-description' : ''  ?>">
+    <?php if ($queried_object->description) : ?>
+      <p class="mmm35-highlight mmm35-highlight_description"><?php echo $queried_object->description; ?></p>
+    <?php endif ?>
     <div class="mmm35-post-list">
       <div class="mmm35-post-list__items">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
