@@ -90,8 +90,7 @@ class MediaContainer extends Component {
   }
 
   renderVideo() {
-    const { mediaUrl, className } = this.props;
-    console.log(className);
+    const { mediaUrl, mediaCaption, className } = this.props;
     return (
       <>
         { this.renderToolbarEditButton() }
